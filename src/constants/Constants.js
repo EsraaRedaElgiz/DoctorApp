@@ -1,10 +1,13 @@
 import {RFValue} from 'react-native-responsive-fontsize';
+
 export const COLORS = {
   blue: '#2F73FC',
-  lightBlue: '#F0F5FF',
+  lightBlue: '#CFE1FE',
   gray: '#C0BFBF',
   lightGray: '#F9F9F9',
   white: '#FFFFFF',
+  darkGray: '#626364',
+  black: '#000',
 };
 export const ICONS = {
   xsIcon: RFValue(10) >= 10 ? RFValue(10) : 5,
@@ -34,9 +37,16 @@ export const RADIUS = {
   xxlRadius: 35,
 };
 export const PADDINGS = {
-  xsPadding: RFValue(5),
+  xsPadding: RFValue(3),
   smPadding: RFValue(10),
   mdPadding: RFValue(15),
   lgPadding: RFValue(20),
   xlPadding: RFValue(25),
+};
+export const MARGIN = {
+  xsMargin: RFValue(5),
+  smMargin: RFValue(10),
+  mdMargin: RFValue(15),
+  lgMargin: RFValue(20),
+  xlMargin: RFValue(25),
 };

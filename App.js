@@ -1,10 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import GeneralTextInput from './src/components/GeneralTextInput/GeneralTextInput';
+import UserProfileButton from './src/components/UserProfileButton/UserProfileButton';
+import GeneralButton from './src/components/GeneralButton/GeneralButton';
+import Card from './src/components/Card/Card';
 
 function App() {
   return (
     <View style={styles.conatiner}>
-      <Text>Hello Wolrd !</Text>
+      <Text style={styles.title}>Hello World !</Text>
     </View>
   );
 }
@@ -14,6 +18,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  title: {
+    fontSize: 30,
+    color: '#000',
+    fontFamily: 'Amaranth',
   },
 });
 
