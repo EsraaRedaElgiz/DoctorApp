@@ -8,6 +8,8 @@ export const COLORS = {
   white: '#FFFFFF',
   darkGray: '#626364',
   black: '#000',
+  darkGray2:"#707070",
+  darkGray3:"#303135"
 };
 export const ICONS = {
   xsIcon: RFValue(10) >= 10 ? RFValue(10) : 5,

@@ -8,12 +8,12 @@ import Reusabletextinput from './src/components/AppTextinput/AppTextinput'
 import { TextInput } from 'react-native-paper';
 import Appbutton from './src/components/Appbutton/Appbutton'
 import SignUp from './src/screens/signUp/signUp'
+import LogIn from './src/screens/logIn/logIn'
 
 function App() {
   return (
     <View style={styles.conatiner}>
-
-      <SignUp />
+      <LogIn />
 
     </View>
   );

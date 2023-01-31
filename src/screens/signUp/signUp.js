@@ -15,7 +15,7 @@ function SignUp() {
             <ScrollView  >
                 <View style={styles.topViewStyle} >
                     <TouchableOpacity style={styles.buttonIconStyle}>
-                        <AntDesign name="left" color={COLORS.darkGray} size={ICONS.mdIcon} />
+                        <AntDesign name="right" color={COLORS.darkGray} size={ICONS.mdIcon} />
                     </TouchableOpacity>
                     <View style={styles.viewHeaderStyle}>
                         <Text style={styles.firstTextHeaderStyle}>تسجيل</Text>
@@ -57,21 +57,26 @@ function SignUp() {
                         style={styles.eachtextinputmargin}
                         right={<TextInput.Icon icon="eye" style={styles.iconStyle} iconColor={COLORS.darkGray} />}
                         bordercolor={COLORS.gray}
+                        secureTextEntry
 
 
 
                     />
-                    <View style={styles.viewForTextAfterTextinputs}>
-                        <Text style={styles.textAfterTextinputsStyle}>By signing you agree to our
-                            <TouchableOpacity  >
-                                <Text style={styles.bluetextstyle}> Terms of use</Text>
-                            </TouchableOpacity>
-                        </Text>
-                        <Text style={styles.textAfterTextinputsStyle}>and
-                            <TouchableOpacity>
-                                <Text style={styles.bluetextstyle}> privacy policy</Text>
-                            </TouchableOpacity>
-                        </Text>
+                    <View style={styles.viewForfirstTextAfterTextinputs}>
+                        <View>
+                            <Text style={styles.textAfterTextinputsStyle}>بتسجيل الدخول فانك نوافق علي</Text>
+                        </View>
+                        <TouchableOpacity  >
+                            <Text style={styles.bluetextstyle}> شروط الاستخدام</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles.viewForSecondTextAfterTextinputs}>
+                        <View>
+                            <Text>و</Text>
+                        </View>
+                        <TouchableOpacity>
+                            <Text style={styles.bluetextstyle}> سياسه الخصوصيه</Text>
+                        </TouchableOpacity>
                     </View>
 
                     <Appbutton
@@ -79,11 +84,12 @@ function SignUp() {
 
                     />
                     <View style={styles.viewForLastTextStyle}>
-                        <Text style={styles.textAfterTextinputsStyle}>Already have an account?
-                            <TouchableOpacity >
-                                <Text style={styles.bluetextstyle}>Log in</Text>
-                            </TouchableOpacity>
-                        </Text>
+                        <View>
+                            <Text style={styles.textAfterTextinputsStyle}> لديك حساب بالفعل؟</Text>
+                        </View>
+                        <TouchableOpacity >
+                            <Text style={styles.bluetextstyle}>تسجيل الدخول </Text>
+                        </TouchableOpacity>
 
                     </View>
 
