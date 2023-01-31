@@ -1,11 +1,19 @@
 import React from 'react';
-import { View, Text, StatusBar, TouchableOpacity, ScrollView, Dimensions, SafeAreaView } from 'react-native';
+import {
+  View,
+  Text,
+  StatusBar,
+  TouchableOpacity,
+  ScrollView,
+  Dimensions,
+  SafeAreaView,
+} from 'react-native';
 import styles from './style';
-import { COLORS, FONTS, ICONS, MARGIN } from '../../constants/Constants'
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import Reusabletextinput from '../../components/AppTextinput/AppTextinput'
-import { TextInput } from "react-native-paper";
-import Appbutton from '../../components/Appbutton/Appbutton'
+import {COLORS, FONTS, ICONS, MARGIN} from '../../constants/Constants';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
+import {TextInput} from 'react-native-paper';
+import Appbutton from '../../components/Appbutton/Appbutton';
 
 function SignUp() {
     return (
@@ -98,7 +106,7 @@ function SignUp() {
             </ScrollView>
         </View>
 
-    )
-
+        
+  );
 }
 export default SignUp;

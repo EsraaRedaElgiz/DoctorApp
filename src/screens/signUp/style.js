@@ -1,9 +1,13 @@
-import { StyleSheet, Dimensions } from "react-native";
-import { COLORS, FONTS, RADIUS, PADDINGS, MARGIN } from "../../constants/Constants";
-import { RFValue } from 'react-native-responsive-fontsize'
-const { height, width } = Dimensions.get('window');
-
-
+import {StyleSheet, Dimensions} from 'react-native';
+import {
+  COLORS,
+  FONTS,
+  RADIUS,
+  PADDINGS,
+  MARGIN,
+} from '../../constants/Constants';
+import {RFValue} from 'react-native-responsive-fontsize';
+const {height, width} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {

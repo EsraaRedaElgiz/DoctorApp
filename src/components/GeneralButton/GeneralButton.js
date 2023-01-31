@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: FONTS.h4,
-    fontWeight: '500',
+    fontFamily: 'Amaranth',
     color: COLORS.white,
   },
 });
