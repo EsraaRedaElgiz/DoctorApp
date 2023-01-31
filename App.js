@@ -7,11 +7,12 @@ import Card from './src/components/Card/Card';
 import Reusabletextinput from './src/components/AppTextinput/AppTextinput';
 import {TextInput} from 'react-native-paper';
 import Appbutton from './src/components/Appbutton/Appbutton';
+import SignUp from './src/screens/signUp/signUp';
 
 function App() {
   return (
     <View style={styles.conatiner}>
-      <Text style={styles.title}>Hello World !</Text>
+      <SignUp />
     </View>
   );
 }
@@ -19,9 +20,9 @@ function App() {
 const styles = StyleSheet.create({
   conatiner: {
     flex: 1,
-    justifyContent: 'center',
+    /* justifyContent: 'center',
     alignItems: 'center',
-    // paddingHorizontal: 20,
+    padding: '4%'*/
   },
   title: {
     fontSize: 30,
