@@ -1,31 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import GeneralTextInput from './src/components/GeneralTextInput/GeneralTextInput';
 import UserProfileButton from './src/components/UserProfileButton/UserProfileButton';
 import GeneralButton from './src/components/GeneralButton/GeneralButton';
 import Card from './src/components/Card/Card';
-import Reusabletextinput from './src/components/AppTextinput/AppTextinput'
-import { TextInput } from 'react-native-paper';
-import Appbutton from './src/components/Appbutton/Appbutton'
+import Reusabletextinput from './src/components/AppTextinput/AppTextinput';
+import {TextInput} from 'react-native-paper';
+import Appbutton from './src/components/Appbutton/Appbutton';
 
 function App() {
   return (
     <View style={styles.conatiner}>
       <Text style={styles.title}>Hello World !</Text>
-      {/*<Reusabletextinput 
-      placeholder="Name"
-      style={{marginVertical:10}}
-
-      />
-      <Reusabletextinput 
-      placeholder="Name"
-      right={<TextInput.Icon icon="eye" onPress={()=>{alert("iconpressed")}} />}
-      style={{marginVertical:10}}
-      />
-      <Appbutton 
-      buttontext="Login"
-      changebuttonstyle={{marginVertical:10}}
-  />*/}
     </View>
   );
 }
@@ -35,7 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '4%'
+    // paddingHorizontal: 20,
   },
   title: {
     fontSize: 30,
