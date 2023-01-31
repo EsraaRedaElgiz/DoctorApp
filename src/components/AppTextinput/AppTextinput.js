@@ -6,7 +6,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import { COLORS, FONTS, RADIUS } from '../../constants/Constants'
 
 function Reusabletextinput(props) {
-    const { style, placeholder, ...rest } = props
+    const { style, placeholder,bordercolor, ...rest } = props
     return (
 
         <View style={styles.container}>
@@ -16,7 +16,8 @@ function Reusabletextinput(props) {
                 label={<Text style={styles.lebelanddplaceholderstyle}>{placeholder}</Text>}
                 mode={'outlined'}
                 activeOutlineColor={COLORS.gray}
-                outlineStyle={styles.outlinestyle}
+                outlineStyle={[styles.outlinestyle, {borderColor:bordercolor} ]}
+                
 
             />
 
@@ -33,17 +34,19 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     text_input_style: {
-        fontSize: FONTS.h4,
+        fontSize: FONTS.h5,
         backgroundColor: COLORS.white,
-        height: RFValue(53),
+        minHeight: RFValue(50),
         width: '100%',
         fontFamily: "Amaranth-Regular",
+    
     }, outlinestyle: {
         borderRadius: RADIUS.xsRadius,
-        borderColor: COLORS.gray
     }, lebelanddplaceholderstyle: {
         color: COLORS.darkGray,
-        fontFamily: "Amaranth-Regular"
+        fontFamily: "Amaranth-Regular",
+        fontSize: FONTS.h5,
+
     }
 
 })

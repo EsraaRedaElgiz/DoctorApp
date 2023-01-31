@@ -7,25 +7,14 @@ import Card from './src/components/Card/Card';
 import Reusabletextinput from './src/components/AppTextinput/AppTextinput'
 import { TextInput } from 'react-native-paper';
 import Appbutton from './src/components/Appbutton/Appbutton'
+import SignUp from './src/screens/signUp/signUp'
 
 function App() {
   return (
     <View style={styles.conatiner}>
-      <Text style={styles.title}>Hello World !</Text>
-      {/*<Reusabletextinput 
-      placeholder="Name"
-      style={{marginVertical:10}}
 
-      />
-      <Reusabletextinput 
-      placeholder="Name"
-      right={<TextInput.Icon icon="eye" onPress={()=>{alert("iconpressed")}} />}
-      style={{marginVertical:10}}
-      />
-      <Appbutton 
-      buttontext="Login"
-      changebuttonstyle={{marginVertical:10}}
-  />*/}
+      <SignUp />
+
     </View>
   );
 }
@@ -33,9 +22,9 @@ function App() {
 const styles = StyleSheet.create({
   conatiner: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '4%'
+    /* justifyContent: 'center',
+     alignItems: 'center',
+     padding: '4%'*/
   },
   title: {
     fontSize: 30,

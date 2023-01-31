@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         borderColor: COLORS.blue,
         justifyContent: 'center',
         alignItems: 'center',
-        height: RFValue(55),
+        height: RFValue(50),
         width: "100%",
     },
     textstyle: {
