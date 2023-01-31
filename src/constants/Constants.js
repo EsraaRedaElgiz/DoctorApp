@@ -2,7 +2,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 
 export const COLORS = {
   blue: '#2F73FC',
-  lightBlue: '#CFE1FE',
+  lightBlue: '#E3ECFD',
   gray: '#C0BFBF',
   lightGray: '#F9F9F9',
   white: '#FFFFFF',
@@ -27,14 +27,14 @@ export const FONTS = {
 };
 export const RADIUS = {
   // general radius
-  radius: 400,
+  radius: RFValue(400),
   // more radius...
-  xsRadius: 5,
-  smRadius: 10,
-  mdRadius: 15,
-  lgRadius: 25,
-  xlRadius: 30,
-  xxlRadius: 35,
+  xsRadius: RFValue(5),
+  smRadius: RFValue(10),
+  mdRadius: RFValue(15),
+  lgRadius: RFValue(25),
+  xlRadius: RFValue(30),
+  xxlRadius: RFValue(35),
 };
 export const PADDINGS = {
   xsPadding: RFValue(3),

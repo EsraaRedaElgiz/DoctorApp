@@ -11,6 +11,7 @@ import {
   COLORS,
   FONTS,
   ICONS,
+  MARGIN,
   PADDINGS,
   RADIUS,
 } from '../../constants/Constants';
@@ -28,7 +29,9 @@ function GeneralTextInput(props) {
   } = props;
   return (
     <View style={line ? null : styles.textIconWrapper}>
-      {line ? <Text>{placeholder}</Text> : null}
+      {line ? (
+        <Text style={styles.placeholderLineStyle}>{placeholder}</Text>
+      ) : null}
       {rightIcon ? (
         <TouchableOpacity>
           <Icon name={rightIcon} size={ICONS.mdIcon} />
@@ -45,6 +48,7 @@ function GeneralTextInput(props) {
                 {
                   borderBottomWidth: 1,
                   flex: 0,
+                  marginBottom: MARGIN.mdMargin,
                 },
               ]
             : styles.textInputStyle,
@@ -81,6 +85,11 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray,
     color: COLORS.black,
     textAlign: 'right',
+  },
+  placeholderLineStyle: {
+    color: COLORS.blue,
+    fontSize: FONTS.h6,
+    fontWeight: 'bold',
   },
 });
 export default GeneralTextInput;
