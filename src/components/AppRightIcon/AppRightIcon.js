@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
         height: RFValue(30),
         borderRadius: RFValue(15),
         backgroundColor: COLORS.white,
-        marginTop: height * .04,
         alignItems: 'center',
         justifyContent: 'center'
     }

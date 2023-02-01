@@ -12,8 +12,9 @@ const styles = StyleSheet.create({
     }
     , topViewStyle: {
         //minHeight: height * .2,
-        paddingHorizontal:PADDINGS.xlPadding,
-        marginBottom: height * .101
+        paddingHorizontal:PADDINGS.lgPadding,
+        marginBottom: height * .101,
+        paddingTop:height * .04
     },
     custombuttonIconStyle: {
         marginBottom: height * .04,
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         backgroundColor: COLORS.white,
         borderTopRightRadius: RFValue(100),
-        paddingHorizontal: PADDINGS.xlPadding,
+        paddingHorizontal: PADDINGS.lgPadding
 
     }, iconStyle: {
         // marginTop:height*.02 ,
