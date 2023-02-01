@@ -1,15 +1,17 @@
-import {RFValue} from 'react-native-responsive-fontsize';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export const COLORS = {
   blue: '#2F73FC',
   lightBlue: '#CFE1FE',
   gray: '#C0BFBF',
   lightGray: '#F9F9F9',
+  lightGray2: "#f7f9f9f9",
   white: '#FFFFFF',
   darkGray: '#626364',
   black: '#000',
-  darkGray2:"#707070",
-  darkGray3:"#303135"
+  darkGray2: "#707070",
+  darkGray3: "#303135",
+
 };
 export const ICONS = {
   xsIcon: RFValue(10) >= 10 ? RFValue(10) : 5,
@@ -17,6 +19,7 @@ export const ICONS = {
   mdIcon: RFValue(20) >= 20 ? RFValue(20) : 15,
   lgIcon: RFValue(25) >= 25 ? RFValue(25) : 20,
   xlIcon: RFValue(30) >= 30 ? RFValue(30) : 25,
+  xxlIcon: RFValue(35) >= 35 ? RFValue(35) : 30
 };
 export const FONTS = {
   h1: RFValue(35) >= 35 ? RFValue(35) : 30,

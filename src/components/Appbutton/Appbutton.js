@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   textstyle: {
     color: COLORS.white,
-    fontSize: FONTS.h3,
+    fontSize: FONTS.h4,
     fontFamily: 'Amaranth-Regular',
   },
   disabledbuttonstyle: {

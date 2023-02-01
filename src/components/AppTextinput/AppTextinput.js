@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     
     }, outlinestyle: {
         borderRadius: RADIUS.xsRadius,
-        color:COLORS.gray
     }, lebelanddplaceholderstyle: {
         color: COLORS.darkGray,
         fontFamily: "Amaranth-Regular",

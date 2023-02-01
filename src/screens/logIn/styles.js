@@ -9,23 +9,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.blue,
-
     }
     , topViewStyle: {
         //minHeight: height * .2,
-        marginBottom: height * .1
-
+        paddingHorizontal:PADDINGS.xlPadding,
+        marginBottom: height * .101
     },
-    buttonIconStyle: {
-        width: RFValue(30),
-        height: RFValue(30),
-        borderRadius: RFValue(15),
-        backgroundColor: COLORS.white,
-        marginLeft: "5%",
-        marginTop: height * .04,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: height * .04
+    custombuttonIconStyle: {
+        marginBottom: height * .04,
     },
     viewHeaderStyle: {
         width: '100%',
@@ -34,7 +25,7 @@ const styles = StyleSheet.create({
     }
     , firstTextHeaderStyle: {
         color: COLORS.white,
-        fontSize: FONTS.h2,
+        fontSize: FONTS.h3,
         fontFamily: "Amaranth-Regular"
     }, secondTextHeaderStyle: {
         color: COLORS.white,
@@ -65,7 +56,7 @@ const styles = StyleSheet.create({
     },
     textAfterTextinputsStyle: {
         color: COLORS.darkGray2,
-        fontSize: FONTS.h5,
+        fontSize: FONTS.h6,
         fontFamily: "Amaranth-Regular",
 
 
@@ -82,16 +73,36 @@ const styles = StyleSheet.create({
     }, viewforcheckboxandwordstyle: {
         flexDirection: 'row',
         alignItems: 'center'
-    },viewfortwolinesandwordstyle:{
-        alignItems:'center',
-        justifyContent:'space-between',
-        flexDirection:'row',
+    }, viewfortwolinesandwordstyle: {
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
 
-    },viewfortwoboxesstyle:{
-        flexDirection:'row',
-        width:'100%',alignItems:'center',
-        justifyContent:'center',
-        marginVertical:height*.03
+    }, viewfortwoboxesstyle: {
+        flexDirection: 'row',
+        width: '100%', alignItems: 'center',
+        justifyContent: 'center',
+        marginVertical: height * .0535
+    }, viewforheaderstyle: {
+        marginBottom: height * .01
+    }, lineviewstyle: {
+        width: '45%',
+        height: RFValue(2),
+        backgroundColor: COLORS.gray
+    }, twoSquaresStyle: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: RFValue(50),
+        height: RFValue(50),
+        borderRadius: RFValue(5),
+        marginHorizontal: '5%',
+        backgroundColor: COLORS.lightGray2,
+        elevation:RFValue(3) 
+    },imagestyle:{
+        width:RFValue(35),
+        height:RFValue(35)
+    },orWordStyle:{
+        color: COLORS.darkGray2
     }
 
 
