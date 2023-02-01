@@ -69,6 +69,7 @@ function LogIn() {
                   }}
                   color={COLORS.blue}
                   uncheckedColor={COLORS.gray}
+                  
                 />
               </View>
               <View>

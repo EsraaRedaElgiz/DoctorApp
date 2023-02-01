@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
   , topViewStyle: {
     //minHeight: height * .2,
     marginBottom: height * .061,
-    paddingHorizontal:PADDINGS.xlPadding
+    paddingHorizontal:PADDINGS.lgPadding,
+    paddingTop: height * .04
 
   },
   buttonIconStyle: {
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: COLORS.white,
     borderTopRightRadius: RFValue(100),
-    paddingHorizontal: PADDINGS.xlPadding,
+    paddingHorizontal: PADDINGS.lgPadding,
 
   }, firsttextinputmargin: {
     marginTop: height * .08
