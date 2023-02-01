@@ -12,9 +12,11 @@ import LogIn from './src/screens/logIn/logIn';
 import UserProfile from './src/screens/UserProfile/UserProfile';
 import MedicalID1 from './src/screens/MedicalID1/MedicalID1';
 import EditPersonDetails from './src/screens/EditPersonDetails/EditPersonDetails';
+import VisaTypeCard from './src/components/VisaTypeCard/VisaTypeCard';
+import AddCard from './src/screens/AddCard/AddCard';
 
 function App() {
-  return <EditPersonDetails />;
+  return <AddCard />;
 }
 
 export default App;
