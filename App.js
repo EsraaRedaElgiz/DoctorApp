@@ -12,9 +12,9 @@ import LogIn from './src/screens/LogIn/LogIn';
 import UserProfile from './src/screens/UserProfile/UserProfile';
 import MedicalID1 from './src/screens/MedicalID1/MedicalID1';
 import EditPersonDetails from './src/screens/EditPersonDetails/EditPersonDetails';
-
+import MedicalSheet from './src/screens/MedicalSheet/MedicalSheet'
 function App() {
-  return <LogIn />;
+  return <MedicalSheet />;
 }
 
 export default App;

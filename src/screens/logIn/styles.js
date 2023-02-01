@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     }
     , topViewStyle: {
         //minHeight: height * .2,
-        paddingHorizontal:PADDINGS.lgPadding,
+        paddingHorizontal:PADDINGS.mdPadding,
         marginBottom: height * .101,
         paddingTop:height * .04
     },
@@ -33,11 +33,11 @@ const styles = StyleSheet.create({
         fontSize: FONTS.h4,
         fontFamily: "Amaranth-Regular"
     }, viewAfterHeaderStyle: {
-        // minHeight: height * .8,
-        flexGrow: 1,
+         minHeight: height * .6832,
+        //flexGrow: 1,
         backgroundColor: COLORS.white,
         borderTopRightRadius: RFValue(100),
-        paddingHorizontal: PADDINGS.lgPadding
+        paddingHorizontal: PADDINGS.mdPadding
 
     }, iconStyle: {
         // marginTop:height*.02 ,
@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: height * .02
+       // marginVertical: height * .02,
+        marginTop:height*.02
 
     }, bluetextstyle: {
         color: COLORS.blue,

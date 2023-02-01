@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   , topViewStyle: {
     //minHeight: height * .2,
     marginBottom: height * .061,
-    paddingHorizontal:PADDINGS.lgPadding,
+    paddingHorizontal:PADDINGS.mdPadding,
     paddingTop: height * .04
 
   },
@@ -46,11 +46,11 @@ const styles = StyleSheet.create({
     fontSize: FONTS.h4,
     fontFamily: "Amaranth-Regular"
   }, viewAfterHeaderStyle: {
-    // minHeight: height * .8,
-    flexGrow: 1,
+     minHeight: height * .7632,
+    //flexGrow: 1,
     backgroundColor: COLORS.white,
     borderTopRightRadius: RFValue(100),
-    paddingHorizontal: PADDINGS.lgPadding,
+    paddingHorizontal: PADDINGS.mdPadding,
 
   }, firsttextinputmargin: {
     marginTop: height * .08
@@ -81,7 +81,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: height * .0225
+   // marginVertical: height * .0225,
+    marginTop: height * .0225
+
 
   }, bluetextstyle: {
     color: COLORS.blue,
