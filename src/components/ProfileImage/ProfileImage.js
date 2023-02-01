@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, Text, StyleSheet} from 'react-native';
+import {View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {MARGIN, COLORS, FONTS, ICONS} from '../../constants/Constants';
@@ -10,7 +10,7 @@ function ProfileImage(props) {
     <View style={styles.profileView}>
       <Image
         style={styles.imageProfileStyle}
-        source={require('../../assets/images/profile.png')}
+        source={require('../../assets/Images/profile.png')}
       />
       <View
         style={
@@ -18,7 +18,9 @@ function ProfileImage(props) {
         }>
         <Text style={styles.name}>عبدالرحمن محمد عياد</Text>
         {iconName ? (
-          <Icon name={iconName} size={ICONS.smIcon} style={styles.icon} />
+          <TouchableOpacity>
+            <Icon name={iconName} size={ICONS.smIcon} style={styles.icon} />
+          </TouchableOpacity>
         ) : null}
       </View>
     </View>

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     marginBottom: MARGIN.xlMargin,
   },
   userProfileButtonView: {
-    marginBottom: MARGIN.mdMargin,
+    marginBottom: MARGIN.smMargin,
   },
 });
 export default styles;

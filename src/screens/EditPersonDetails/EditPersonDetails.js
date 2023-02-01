@@ -4,32 +4,40 @@ import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
 import {TextInput} from 'react-native-paper';
 import GeneralPage from '../../components/GeneralPage/GeneralPage';
 import ProfileImage from '../../components/ProfileImage/ProfileImage';
-import {COLORS, ICONS} from '../../constants/Constants';
+import {COLORS, ICONS, MARGIN} from '../../constants/Constants';
 import styles from './EditPersonDetailsStyle';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {RFValue} from 'react-native-responsive-fontsize';
+import SelectDropdown from 'react-native-select-dropdown';
 
 function EditPersonDetails(props) {
   const [visible, setVisible] = useState(false);
+  const [bloodType, setBloodType] = useState('نوع الدم');
   const handleVisible = () => {
     setVisible(true);
   };
+  const updateBloodType = type => {
+    setBloodType(type);
+  };
+
+  const countries = ['A+', 'B+', 'C+'];
   return (
     <GeneralPage>
       <View style={styles.conatiner}>
         <ProfileImage iconName="edit" />
-        <View style={styles.inputView}>
-          <Reusabletextinput
-            placeholder="نوع الدم"
-            bordercolor={COLORS.gray}
-            right={
-              <TextInput.Icon
-                onPress={handleVisible}
-                icon="chevron-down"
-                style={styles.iconStyle}
-                iconColor={COLORS.darkGray}
-              />
-            }
+        <View style={styles.dropDownView}>
+          <SelectDropdown
+            renderDropdownIcon={() => (
+              <Icon name="caretdown" size={ICONS.xsIcon} color={COLORS.gray} />
+            )}
+            buttonTextStyle={{textAlign: 'left'}}
+            rowTextStyle={{textAlign: 'right'}}
+            buttonStyle={styles.buttonStyle}
+            defaultButtonText="نوع الدم"
+            data={countries}
+            onSelect={(selectedItem, index) => {
+              console.log(selectedItem, index);
+            }}
           />
         </View>
         <View style={styles.inputView}>

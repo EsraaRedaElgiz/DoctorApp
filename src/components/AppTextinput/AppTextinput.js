@@ -23,24 +23,23 @@ function Reusabletextinput(props) {
   );
 }
 const styles = StyleSheet.create({
-    container: {
-        width: "100%"
-    },
-    text_input_style: {
-        fontSize: FONTS.h5,
-        backgroundColor: COLORS.white,
-        minHeight: RFValue(50),
-        width: '100%',
-        fontFamily: "Amaranth-Regular",
-    
-    }, outlinestyle: {
-        borderRadius: RADIUS.xsRadius,
-    }, lebelanddplaceholderstyle: {
-        color: COLORS.darkGray,
-        fontFamily: "Amaranth-Regular",
-        fontSize: FONTS.h5,
-
-    }
-
-})
+  container: {
+    width: '100%',
+  },
+  text_input_style: {
+    fontSize: FONTS.h5,
+    backgroundColor: COLORS.white,
+    minHeight: RFValue(50),
+    width: '100%',
+    fontFamily: 'Amaranth-Regular',
+  },
+  outlinestyle: {
+    borderRadius: RADIUS.xsRadius,
+  },
+  lebelanddplaceholderstyle: {
+    color: COLORS.darkGray,
+    fontFamily: 'Amaranth-Regular',
+    fontSize: FONTS.h5,
+  },
+});
 export default Reusabletextinput;

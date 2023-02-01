@@ -31,7 +31,25 @@ const styles = StyleSheet.create({
     height: RFValue(30),
     backgroundColor: COLORS.white,
   },
-  bloodType: {fontSize: 20, color: COLORS.black},
+  bloodType: {
+    fontSize: 20,
+    color: COLORS.black,
+  },
+  dropDownView: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: COLORS.white,
+    marginBottom: MARGIN.mdMargin,
+  },
+  buttonStyle: {
+    flex: 1,
+    borderWidth: 1,
+    borderRadius: RFValue(5),
+    borderColor: COLORS.gray,
+    backgroundColor: COLORS.white,
+    height: RFValue(46),
+  },
 });
 
 export default styles;
