@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {RFValue} from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {
   COLORS,
@@ -18,7 +19,7 @@ function UserProfileButton(props) {
           <Text style={styles.title}>{title}</Text>
         </View>
         <View style={[styles.textIconWrapper, {alignItems: 'flex-end'}]}>
-          <Icon size={ICONS.mdIcon} color={COLORS.darkGray} name={iconName} />
+          <Icon size={ICONS.smIcon} color={COLORS.darkGray} name={iconName} />
         </View>
       </View>
     </TouchableOpacity>
@@ -26,13 +27,16 @@ function UserProfileButton(props) {
 }
 const styles = StyleSheet.create({
   buttonStyle: {
-    padding: PADDINGS.smPadding,
+    height: RFValue(50),
+    elevation: 2,
+    justifyContent: 'center',
     borderRadius: RADIUS.xsRadius,
     backgroundColor: COLORS.lightBlue,
+    paddingHorizontal: RFValue(8),
   },
   title: {
     fontSize: FONTS.h5,
-    fontWeight: '500',
+    fontWeight: '600',
     color: COLORS.darkGray,
   },
   buttonContent: {
