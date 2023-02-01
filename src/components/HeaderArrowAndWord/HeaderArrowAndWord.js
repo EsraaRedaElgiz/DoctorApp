@@ -25,7 +25,7 @@ function HeaderArrowAndWord(props) {
 }
 const styles = StyleSheet.create({
     container: {
-        width: '96%',
+        width: '95%',
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row'

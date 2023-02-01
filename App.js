@@ -13,6 +13,8 @@ import EditPersonDetails from './src/screens/EditPersonDetails/EditPersonDetails
 import MedicalSheet from './src/screens/MedicalSheet/MedicalSheet'
 import VisaTypeCard from './src/components/VisaTypeCard/VisaTypeCard';
 import AddCard from './src/screens/AddCard/AddCard';
+import SignUp from './src/screens/SignUp/SignUp';
+import LogIn from './src/screens/LogIn/LogIn'
 function App() {
   return <MedicalSheet />;
 }
