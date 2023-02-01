@@ -5,7 +5,6 @@ import {COLORS, FONTS, MARGIN, PADDINGS} from '../../constants/Constants';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.lightGray,
     padding: PADDINGS.smPadding,
     paddingVertical: PADDINGS.xlPadding,
   },
