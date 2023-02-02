@@ -24,7 +24,7 @@ function EditPersonDetails(props) {
   return (
     <GeneralPage>
       <View style={styles.conatiner}>
-        <ProfileImage iconName="edit" />
+        <ProfileImage iconName="edit" nameAfterImage iconOnImage />
         <View style={styles.dropDownView}>
           <SelectDropdown
             renderDropdownIcon={() => (

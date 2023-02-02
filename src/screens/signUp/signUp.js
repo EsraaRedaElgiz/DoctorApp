@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
   StatusBar,
   TouchableOpacity,
   ScrollView,
-  Dimensions,
-  SafeAreaView,
 } from 'react-native';
 import styles from './style';
 import {COLORS, FONTS, ICONS, MARGIN} from '../../constants/Constants';

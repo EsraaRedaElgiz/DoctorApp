@@ -10,7 +10,7 @@ function UserProfile(props) {
   return (
     <GeneralPage>
       <View style={styles.container}>
-        <ProfileImage />
+        <ProfileImage nameAfterImage />
         {userProfileData.map((el, idx) => {
           return (
             <View key={idx} style={styles.userProfileButtonView}>

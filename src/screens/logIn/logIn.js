@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -69,7 +69,6 @@ function LogIn() {
                   }}
                   color={COLORS.blue}
                   uncheckedColor={COLORS.gray}
-                  
                 />
               </View>
               <View>

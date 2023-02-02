@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     }, firstTextInputMargin: {
         marginBottom: '15%',
     }, secondTextInputMargin: {
-       marginBottom: '55%',
+       marginBottom: '60%',
     }
 
 

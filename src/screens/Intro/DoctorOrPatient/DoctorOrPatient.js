@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
     Text,
     View,
-    
     Image,
     StatusBar
     , ScrollView
