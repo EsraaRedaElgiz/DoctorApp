@@ -23,8 +23,9 @@ import ProfileImage from './src/components/ProfileImage/ProfileImage';
 import Visa from './src/components/Visa/Visa';
 import GeneralPage from './src/components/GeneralPage/GeneralPage';
 import Payment from './src/screens/Payment/Payment';
+import NewPassword from './src/screens/NewPassword/NewPassword'
 function App() {
-  return <DoctorOrPatient/>;
+  return <NewPassword/>;
 }
 
 export default App;

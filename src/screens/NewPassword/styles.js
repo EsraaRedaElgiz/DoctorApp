@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.white,
         paddingHorizontal: PADDINGS.mdPadding,
         paddingTop: '5%',
-        //  alignItems: 'center'
         paddingBottom: '1%'
     }, arrowButtonStyle: {
         elevation: RFValue(10)
@@ -28,10 +27,8 @@ const styles = StyleSheet.create({
         marginBottom: '10%',
     }, secondTextInputMargin: {
        marginBottom: '10%',
-    },viewBetweenLastTextInputAndButton:{
-        minHeight: RFValue(50),
+    },thirdTextInputMargin:{
         marginBottom:'30%'
-
     }
 
 

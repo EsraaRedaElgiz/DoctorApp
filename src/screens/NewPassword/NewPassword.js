@@ -11,7 +11,7 @@ import HeaderArrowAndWord from "../../components/HeaderArrowAndWord/HeaderArrowA
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput'
 import Appbutton from "../../components/Appbutton/Appbutton";
 import { TextInput } from 'react-native-paper';
-function ResetPassword() {
+function NewPassword() {
 
     return (
 
@@ -19,7 +19,7 @@ function ResetPassword() {
             <View style={styles.container}>
                 <StatusBar backgroundColor={COLORS.blue} />
                 <HeaderArrowAndWord
-                    text="إعاده تعيين كلمة المرور"
+                    text="تغيير كلمه المرور"
                     arrowButtonStyle={styles.arrowButtonStyle}
                     textColor={COLORS.black}
                     textStyle={styles.textHeaderStyle}
@@ -30,7 +30,7 @@ function ResetPassword() {
                     <Text style={styles.textStyle}>سابقا</Text>
                 </View>               
                 <Reusabletextinput
-                    placeholder="كلمه المرور"
+                    placeholder="كلمه المرور القديمه"
                     right={
                         <TextInput.Icon
                             icon="eye"
@@ -43,7 +43,7 @@ function ResetPassword() {
 
                 />
                 <Reusabletextinput
-                    placeholder="تأكيد كلمه المرور"
+                    placeholder="كلمه المرور الجديده"
                     right={
                         <TextInput.Icon
                             icon="eye"
@@ -54,9 +54,21 @@ function ResetPassword() {
                     secureTextEntry
                     style={styles.secondTextInputMargin}
                 />
-                <View style={styles.viewBetweenLastTextInputAndButton}></View>
+                <Reusabletextinput
+                    placeholder="تأكيد كلمه المرور الجديده"
+                    right={
+                        <TextInput.Icon
+                            icon="eye"
+                            iconColor={COLORS.darkGray}
+                        />
+                    }
+                    bordercolor={COLORS.gray}
+                    secureTextEntry
+                    style={styles.thirdTextInputMargin}
+                />
                 <Appbutton
-                    buttonText="حفظ"     
+                    buttonText="حفظ"
+                    
                 />
             </View>
         </ScrollView>
@@ -64,4 +76,4 @@ function ResetPassword() {
     )
 
 }
-export default ResetPassword;
+export default NewPassword;
