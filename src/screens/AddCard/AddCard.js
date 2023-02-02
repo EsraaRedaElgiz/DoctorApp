@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Dimensions} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
 import GeneralButton from '../../components/GeneralButton/GeneralButton';
@@ -7,6 +7,8 @@ import GeneralPage from '../../components/GeneralPage/GeneralPage';
 import VisaTypeCard from '../../components/VisaTypeCard/VisaTypeCard';
 import {COLORS, FONTS} from '../../constants/Constants';
 import styles from './AddCardStyle';
+
+const {width, height} = Dimensions.get('window');
 
 function AddCard(props) {
   const [payment, setPayment] = useState([
@@ -56,7 +58,7 @@ function AddCard(props) {
             />
           </View>
         </View>
-        <GeneralButton title="تأكيد" style={{marginTop: RFValue(200)}} />
+        <GeneralButton title="تأكيد" style={{marginTop: height * 0.3}} />
       </View>
     </GeneralPage>
   );

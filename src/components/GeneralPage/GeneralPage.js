@@ -8,6 +8,7 @@ function GeneralPage(props) {
     <View style={[styles.container, style]}>
       <StatusBar backgroundColor={COLORS.blue} />
       <ScrollView
+        contentContainerStyle={styles.contentStyle}
         showsVerticalScrollIndicator={false}
         style={styles.scrollStyle}>
         {children}
@@ -22,6 +23,9 @@ const styles = StyleSheet.create({
   },
   scrollStyle: {
     flex: 1,
+  },
+  contentStyle: {
+    // flex: 1,
   },
 });
 export default GeneralPage;

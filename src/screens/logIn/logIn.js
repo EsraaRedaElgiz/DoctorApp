@@ -7,7 +7,7 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
-import styles from './styles';
+import styles from './Styles';
 import {Checkbox} from 'react-native-paper';
 import {COLORS, ICONS} from '../../constants/Constants';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -69,7 +69,6 @@ function LogIn() {
                   }}
                   color={COLORS.blue}
                   uncheckedColor={COLORS.gray}
-                  
                 />
               </View>
               <View>

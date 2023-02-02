@@ -8,7 +8,7 @@ import {
   Dimensions,
   SafeAreaView,
 } from 'react-native';
-import styles from './style';
+import styles from './Style';
 import {COLORS, FONTS, ICONS, MARGIN} from '../../constants/Constants';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
