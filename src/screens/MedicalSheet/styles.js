@@ -14,7 +14,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.blue,
 
-  },topViewStyle: {
+  },wordHeaderMargin:{
+    marginLeft:RFValue(-25)
+  },
+  topViewStyle: {
     //minHeight: height * .2,
     paddingHorizontal:PADDINGS.mdPadding,
     paddingTop: height * .04
@@ -25,7 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical:height*.02
   }, viewAfterHeaderStyle: {
-     minHeight: height * .732,
+     minHeight: height * .735,
     //flexGrow: 1,
     backgroundColor: COLORS.white,
     borderTopRightRadius: RFValue(100),

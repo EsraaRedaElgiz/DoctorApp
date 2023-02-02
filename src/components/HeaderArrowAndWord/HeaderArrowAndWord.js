@@ -8,13 +8,13 @@ const { height, width } = Dimensions.get('window');
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
 
 function HeaderArrowAndWord(props) {
-    const { text, textcolor, arrowbuttonstyle } = props
+    const { text, textColor,textStyle, arrowButtonStyle } = props
     return (
-        <View style={styles.container}>
+        <View style={[styles.container]}>
 
-            <ReusableArrowButton style={arrowbuttonstyle} />
+            <ReusableArrowButton style={arrowButtonStyle} />
             <View>
-                <Text style={[styles.textstyle, { color: textcolor }]}>{text}</Text>
+                <Text style={[styles.textstyle,textStyle, { color: textColor }]}>{text}</Text>
             </View>
             <View></View>
 
@@ -25,13 +25,14 @@ function HeaderArrowAndWord(props) {
 }
 const styles = StyleSheet.create({
     container: {
-        width: '95%',
+        width: '100%',
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row'
     }, textstyle: {
-        fontSize: FONTS.h3,
-        fontFamily: "Amaranth-Regular"
+        fontSize: FONTS.h4,
+        fontFamily: "Amaranth-Regular",
+        fontWeight:'bold'
     }
 
 })

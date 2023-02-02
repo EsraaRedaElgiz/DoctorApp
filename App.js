@@ -15,8 +15,12 @@ import VisaTypeCard from './src/components/VisaTypeCard/VisaTypeCard';
 import AddCard from './src/screens/AddCard/AddCard';
 import SignUp from './src/screens/SignUp/SignUp';
 import LogIn from './src/screens/LogIn/LogIn'
+import ForgetPassword from './src/screens/ForgetPassword/ForgetPassword'
+import VertificationCode from './src/screens/VetificationCode/VertificationCode'
+import ResetPassword from './src/screens/ResetPassword/ResetPassword'
+import DoctorOrPatient from './src/screens/Intro/DoctorOrPatient/DoctorOrPatient'
 function App() {
-  return <MedicalSheet />;
+  return <DoctorOrPatient/>;
 }
 
 export default App;

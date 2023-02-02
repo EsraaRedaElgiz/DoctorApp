@@ -16,6 +16,7 @@ import {TextInput} from 'react-native-paper';
 import Appbutton from '../../components/Appbutton/Appbutton';
 import HeaderArrowAndWord from '../../components/HeaderArrowAndWord/HeaderArrowAndWord'
 import ProfileImage from '../../components/ProfileImage/ProfileImage';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 function MedicalSheet() {
   return (
@@ -25,7 +26,8 @@ function MedicalSheet() {
         <View style={styles.topViewStyle}>
             <HeaderArrowAndWord
             text="بيانات طبيه" 
-            textcolor={COLORS.white}
+            textColor={COLORS.white}
+            textStyle={styles.wordHeaderMargin}
             />
           <View style={styles.viewHeaderStyle}>
           <ProfileImage
@@ -67,7 +69,7 @@ function MedicalSheet() {
           />
           
           
-          <Appbutton buttontext="تأكيد"/>
+          <Appbutton buttonText="تأكيد"/>
           
         </View>
       </ScrollView>

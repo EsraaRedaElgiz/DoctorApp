@@ -59,7 +59,6 @@ function SignUp() {
             right={
               <TextInput.Icon
                 icon="eye"
-                style={styles.iconStyle}
                 iconColor={COLORS.darkGray}
               />
             }
@@ -72,7 +71,6 @@ function SignUp() {
             right={
               <TextInput.Icon
                 icon="eye"
-                style={styles.iconStyle}
                 iconColor={COLORS.darkGray}
               />
             }
