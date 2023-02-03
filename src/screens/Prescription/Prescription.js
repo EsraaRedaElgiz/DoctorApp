@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
 import GeneralPage from '../../components/GeneralPage/GeneralPage';
 import {
   Table,
@@ -9,8 +9,9 @@ import {
   Col,
 } from 'react-native-table-component';
 import styles from './PrescriptionStyle';
-import {COLORS, FONTS, MARGIN} from '../../constants/Constants';
+import {COLORS, FONTS, MARGIN, PADDINGS} from '../../constants/Constants';
 import {RFValue} from 'react-native-responsive-fontsize';
+const {height} = Dimensions.get('window');
 
 function Prescription(props) {
   const [head, setHead] = useState(['الدواء', 'المدة', 'ملاحظات']);
@@ -57,16 +58,38 @@ function Prescription(props) {
         </View>
         <Text style={styles.title}>التحاليل</Text>
         <View style={styles.analysis}>
-          <TouchableOpacity style={styles.openButton}>
-            <Text style={styles.openText}>Open</Text>
-          </TouchableOpacity>
-          <Text style={styles.analysisText}>PCR-Analysis</Text>
-        </View>
-        <View style={styles.analysis}>
-          <TouchableOpacity style={styles.openButton}>
-            <Text style={styles.openText}>Add</Text>
-          </TouchableOpacity>
-          <Text style={styles.analysisText}>Add</Text>
+          <View
+            style={{
+              borderWidth: 1,
+              height: height * 0.05,
+              backgroundColor: COLORS.white,
+              borderColor: COLORS.gray,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              paddingHorizontal: PADDINGS.smPadding,
+            }}>
+            <Text style={styles.analysisText}>تحاليل</Text>
+            <TouchableOpacity style={styles.openButton}>
+              <Text style={styles.openText}>افتح</Text>
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
+              borderWidth: 1,
+              height: height * 0.05,
+              backgroundColor: COLORS.lightGray3,
+              borderColor: COLORS.gray,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              paddingHorizontal: PADDINGS.smPadding,
+            }}>
+            <Text style={styles.analysisText}>اشاعات</Text>
+            <TouchableOpacity style={styles.openButton}>
+              <Text style={styles.openText}>اضافة</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </GeneralPage>
