@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
         color: COLORS.darkGray,
         fontSize: FONTS.h5,
         fontFamily: "Amaranth-Regular",
+        textAlign:'center'
     }, textInputMargin: {
         marginTop: '15%'
     }, buttonMargin: {

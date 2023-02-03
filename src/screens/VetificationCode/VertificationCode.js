@@ -40,8 +40,7 @@ function VertificationCode() {
                     </View>
                 </View>
                 <View style={styles.viewForTextStyle}>
-                    <Text style={styles.textStyle} >قم بإدخال رمز التأكيد المرسل لك عبر</Text>
-                    <Text style={styles.textStyle}>عنوان البريد الالكتروني</Text>
+                    <Text style={styles.textStyle} >قم بإدخال رمز التأكيد المرسل لك عبر{'\n'}عبر البريد الالكتروني</Text>
                 </View>
                 <View style={styles.viewCodeFieldStyle}>
                     <CodeField

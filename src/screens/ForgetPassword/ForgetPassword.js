@@ -20,8 +20,7 @@ function ForgetPassword() {
                 <Image source={require('../../assets/Images/ForgetPassword.png')} style={styles.imageStyle} />
             </View>
             <View style={styles.viewForTextStyle}>
-                <Text style={styles.textStyle} >قم بإدخال بريدك الالكتروني او رقم الهاتف</Text>
-                <Text style={styles.textStyle}>لإرسال رمز التأكيد</Text>
+                <Text style={styles.textStyle} >قم بإدخال بريدك الالكتروني او رقم الهاتف{'\n'}لارسال رمز التأكيد</Text>
             </View>
             <Reusabletextinput 
             style={styles.textInputMargin}

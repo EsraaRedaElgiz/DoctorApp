@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
     }, textStyle: {
         color: COLORS.darkGray,
         fontSize: FONTS.h5,
-        fontFamily: "Amaranth-Regular"
+        fontFamily: "Amaranth-Regular",
+        textAlign:'center'
     }, buttonMargin: {
         marginTop: '15%'
     }, codeFieldRoot: {

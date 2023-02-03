@@ -25,9 +25,7 @@ function NewPassword() {
                     textStyle={styles.textHeaderStyle}
                 />
                 <View style={styles.viewForTextStyle}>
-                    <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة</Text>
-                    <Text style={styles.textStyle}>مختلفه عن كلمه المرور المستخدمه</Text>
-                    <Text style={styles.textStyle}>سابقا</Text>
+                    <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة{'\n'}مختلفه عن كلمه المرور المستخدمه{'\n'}سابقا</Text>
                 </View>               
                 <Reusabletextinput
                     placeholder="كلمه المرور القديمه"

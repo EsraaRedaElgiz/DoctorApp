@@ -26,8 +26,9 @@ import Splash from './src/screens/Intro/Splash/Splash'
 import History from './src/screens/History/History'
 import Appointment from './src/screens/Appointment/Appointment'
 import Prescription from './src/screens/Prescription/Prescription';
+import InrtoSlider from './src/screens/Intro/IntroSlider/IntroSlider'
 function App() {
-  return <Splash/>
+  return <InrtoSlider/>
 }
 
 
