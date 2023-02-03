@@ -133,6 +133,7 @@ function Prescription(props) {
           </View>
           <View style={styles.imageView}>
             <Image
+              resizeMode="contain"
               source={require('../../assets/Images/pcr-analysis.jpeg')}
               style={styles.imageStyle}
             />
