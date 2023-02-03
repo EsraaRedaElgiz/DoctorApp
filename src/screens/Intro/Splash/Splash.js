@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, StatusBar } from 'react-native'
 import Lottie from 'lottie-react-native';
 import { COLORS } from '../../../constants/Constants'
 import { RFValue } from 'react-native-responsive-fontsize'
@@ -7,6 +7,7 @@ import { RFValue } from 'react-native-responsive-fontsize'
 function Splash() {
     return (
         <View style={styles.container}>
+            <StatusBar backgroundColor={COLORS.blue} />
             <Lottie source={require('./intro.json')} autoPlay loop style={styles.lottyStyle} />
         </View>
     );

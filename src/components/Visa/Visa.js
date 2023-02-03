@@ -21,31 +21,29 @@ function Visa(props) {
     : require('../../assets/Images/visa.jpg');
   const colors = ['#0085E4', '#00AAF2', '#00C8DE', '#00DFB3'];
   return (
-    <TouchableOpacity activeOpacity={0.6} {...rest}>
-      <LinearGradient colors={colors} style={styles.visa}>
+    <TouchableOpacity style={styles.visa} activeOpacity={0.6} {...rest}>
+      <View>
+        <Image
+          resizeMode="contain"
+          style={styles.visaImage}
+          source={visaType}
+        />
+      </View>
+      <View style={styles.visaNumberView}>
+        <Text style={styles.visaNumber}>4444</Text>
+        <Text style={styles.visaNumber}>3333</Text>
+        <Text style={styles.visaNumber}>2222</Text>
+        <Text style={styles.visaNumber}>1111</Text>
+      </View>
+      <View style={styles.visaData}>
+        <View style={styles.date}>
+          <Text style={styles.visaTextData}>Date</Text>
+          <Text style={styles.visaTextData}>13/4</Text>
+        </View>
         <View>
-          <Image
-            resizeMode="contain"
-            style={styles.visaImage}
-            source={visaType}
-          />
+          <Text style={styles.visaTextData}>ABDELRAHMAN AYAD</Text>
         </View>
-        <View style={styles.visaNumberView}>
-          <Text style={styles.visaNumber}>4444</Text>
-          <Text style={styles.visaNumber}>3333</Text>
-          <Text style={styles.visaNumber}>2222</Text>
-          <Text style={styles.visaNumber}>1111</Text>
-        </View>
-        <View style={styles.visaData}>
-          <View style={styles.date}>
-            <Text style={styles.visaTextData}>Date</Text>
-            <Text style={styles.visaTextData}>13/4</Text>
-          </View>
-          <View>
-            <Text style={styles.visaTextData}>ABDELRAHMAN AYAD</Text>
-          </View>
-        </View>
-      </LinearGradient>
+      </View>
     </TouchableOpacity>
   );
 }
@@ -56,6 +54,7 @@ const styles = StyleSheet.create({
     borderRadius: RFValue(10),
     padding: RFValue(10),
     marginBottom: RFValue(10),
+    backgroundColor: COLORS.gray,
   },
   visaImage: {
     width: RFValue(60),
