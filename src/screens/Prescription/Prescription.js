@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {View, Text, Dimensions, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  Dimensions,
+  TouchableOpacity,
+  Modal,
+  Image,
+} from 'react-native';
 import GeneralPage from '../../components/GeneralPage/GeneralPage';
 import {
   Table,
@@ -9,8 +16,15 @@ import {
   Col,
 } from 'react-native-table-component';
 import styles from './PrescriptionStyle';
-import {COLORS, FONTS, MARGIN, PADDINGS} from '../../constants/Constants';
+import {
+  COLORS,
+  FONTS,
+  ICONS,
+  MARGIN,
+  PADDINGS,
+} from '../../constants/Constants';
 import {RFValue} from 'react-native-responsive-fontsize';
+import Icon from 'react-native-vector-icons/AntDesign';
 const {height} = Dimensions.get('window');
 
 function Prescription(props) {
@@ -21,6 +35,7 @@ function Prescription(props) {
     ['Hiii', 'يومان', 'مرة'],
     ['tmam', 'يومان', 'مرة'],
   ]);
+  const [visible, setVisible] = useState(false);
   return (
     <GeneralPage>
       <View style={styles.container}>
@@ -70,7 +85,9 @@ function Prescription(props) {
               paddingHorizontal: PADDINGS.smPadding,
             }}>
             <Text style={styles.analysisText}>تحاليل</Text>
-            <TouchableOpacity style={styles.openButton}>
+            <TouchableOpacity
+              onPress={() => setVisible(true)}
+              style={styles.openButton}>
               <Text style={styles.openText}>افتح</Text>
             </TouchableOpacity>
           </View>
@@ -92,6 +109,36 @@ function Prescription(props) {
           </View>
         </View>
       </View>
+      {/* MODAL analysis */}
+      <Modal
+        transparent
+        visible={visible}
+        onRequestClose={() => {
+          setVisible(false);
+        }}>
+        <View style={styles.modal}>
+          <View style={styles.wrapperView}>
+            <View style={styles.headerView}>
+              <Text style={styles.titleModal}>التحليل</Text>
+            </View>
+            <TouchableOpacity
+              onPress={() => setVisible(false)}
+              style={{flex: 1}}>
+              <Icon
+                name="closecircleo"
+                color={COLORS.white}
+                size={ICONS.lgIcon}
+              />
+            </TouchableOpacity>
+          </View>
+          <View style={styles.imageView}>
+            <Image
+              source={require('../../assets/Images/pcr-analysis.jpeg')}
+              style={styles.imageStyle}
+            />
+          </View>
+        </View>
+      </Modal>
     </GeneralPage>
   );
 }

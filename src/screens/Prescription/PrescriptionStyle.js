@@ -60,6 +60,33 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: COLORS.darkGray2,
   },
+  modal: {
+    flex: 1,
+    padding: PADDINGS.smPadding,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  wrapperView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  headerView: {
+    flex: 1,
+    alignItems: 'flex-end',
+    marginRight: RFValue(-50),
+  },
+  titleModal: {
+    fontSize: FONTS.h3,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  imageView: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  imageStyle: {
+    height: RFValue(250),
+    width: '100%',
+  },
 });
 
 export default styles;
