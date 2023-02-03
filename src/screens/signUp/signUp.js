@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
   StatusBar,
   TouchableOpacity,
   ScrollView,
-  Dimensions,
-  SafeAreaView,
 } from 'react-native';
-import styles from './Style';
+import styles from './style';
 import {COLORS, FONTS, ICONS, MARGIN} from '../../constants/Constants';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
@@ -59,7 +57,6 @@ function SignUp() {
             right={
               <TextInput.Icon
                 icon="eye"
-                style={styles.iconStyle}
                 iconColor={COLORS.darkGray}
               />
             }
@@ -72,7 +69,6 @@ function SignUp() {
             right={
               <TextInput.Icon
                 icon="eye"
-                style={styles.iconStyle}
                 iconColor={COLORS.darkGray}
               />
             }

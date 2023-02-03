@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {
   View,
   Text,
@@ -7,7 +7,7 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
-import styles from './Styles';
+import styles from './styles';
 import {Checkbox} from 'react-native-paper';
 import {COLORS, ICONS} from '../../constants/Constants';
 import AntDesign from 'react-native-vector-icons/AntDesign';

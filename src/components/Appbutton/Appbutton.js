@@ -6,10 +6,10 @@ import {COLORS, FONTS, RADIUS} from '../../constants/Constants';
 
 function Appbutton(props) {
   const {
-    buttontext,
-    changebuttonstyle,
-    changetextstyle,
-    isloading,
+    buttonText,
+    changeButtonStyle,
+    changeTextStyle,
+    isLoading,
     disabled,
     ...rest
   } = props;
@@ -17,22 +17,22 @@ function Appbutton(props) {
   return (
     <TouchableOpacity
       {...rest}
-      disabled={isloading}
+      disabled={isLoading}
       style={[
-        styles.buttonstyle,
-        changebuttonstyle,
-        disabled ? styles.disabledbuttonstyle : null,
+        styles.buttonStyle,
+        changeButtonStyle,
+        disabled ? styles.disabledButtonStyle : null,
       ]}>
-      {isloading ? (
+      {isLoading ? (
         <ActivityIndicator size={FONTS.h2} color={COLORS.white} />
       ) : (
-        <Text style={[styles.textstyle, changetextstyle]}>{buttontext}</Text>
+        <Text style={[styles.textStyle, changeTextStyle]}>{buttonText}</Text>
       )}
     </TouchableOpacity>
   );
 }
 const styles = StyleSheet.create({
-  buttonstyle: {
+  buttonStyle: {
     backgroundColor: COLORS.blue,
     borderRadius: RADIUS.xsRadius,
     borderWidth: RFValue(1),
@@ -42,12 +42,13 @@ const styles = StyleSheet.create({
     height: RFValue(50),
     width: '100%',
   },
-  textstyle: {
+  textStyle: {
     color: COLORS.white,
     fontSize: FONTS.h4,
     fontFamily: 'Amaranth-Regular',
+    fontWeight:'bold'
   },
-  disabledbuttonstyle: {
+  disabledButtonStyle: {
     opacity: 0.8,
   },
 });
