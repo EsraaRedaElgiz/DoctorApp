@@ -17,8 +17,9 @@ import ProfileImage from './src/components/ProfileImage/ProfileImage';
 import Visa from './src/components/Visa/Visa';
 import GeneralPage from './src/components/GeneralPage/GeneralPage';
 import Payment from './src/screens/Payment/Payment';
+import Prescription from './src/screens/Prescription/Prescription';
 function App() {
-  return <Payment />;
+  return <Prescription />;
 }
 
 export default App;
