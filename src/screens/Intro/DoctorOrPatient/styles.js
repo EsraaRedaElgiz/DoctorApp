@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.white,
         paddingHorizontal: PADDINGS.mdPadding,
         paddingTop: '5%',
-        paddingBottom: '1%'
+        paddingBottom: '1%',
+        
     }, viewForImageStyle: {
         marginBottom: '10%',
         alignItems: 'center',

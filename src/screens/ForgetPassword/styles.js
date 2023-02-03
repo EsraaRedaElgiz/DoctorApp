@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingBottom:'1%'
     }, arrowButtonStyle: {
-        elevation: RFValue(10)
+        elevation: RFValue(3)
     }, textHeaderStyle: {
         marginLeft:RFValue(-15)
     }, viewImage: {

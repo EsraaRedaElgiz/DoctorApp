@@ -22,7 +22,7 @@ function ProfileImage(props) {
               source={require('../../assets/Images/profile.png')}
             />
             <TouchableOpacity style={styles.buttonEditIconOnImage}>
-              <FontAwesome5 name="pen" />
+              <FontAwesome5 name="pen" size={ICONS.xsIcon} />
             </TouchableOpacity>
           </View>
         ) : (
@@ -54,7 +54,7 @@ function ProfileImage(props) {
             />
           </View>
           <TouchableOpacity style={styles.buttonEditIconOnImage}>
-            <FontAwesome5 name="pen" />
+            <FontAwesome5 name="pen" size={ICONS.xsIcon} />
           </TouchableOpacity>
         </View>
       ) : (
