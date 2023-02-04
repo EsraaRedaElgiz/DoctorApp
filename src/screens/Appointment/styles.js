@@ -14,10 +14,12 @@ const styles = StyleSheet.create({
         elevation: RFValue(3)
     }, textHeaderStyle: {
         marginLeft: RFValue(-25)
-    },afterHeaderMargin:{
+    }, afterHeaderMargin: {
         marginBottom: '10%'
-    },afterEachCardMargin:{
+    }, afterEachCardMargin: {
         marginBottom: '5%'
+    }, scrollViewStyle: {
+        backgroundColor: COLORS.white
     }
 
 })

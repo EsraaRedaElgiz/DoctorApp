@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         color: COLORS.darkGray,
         fontSize: FONTS.h5,
         fontFamily: "Amaranth-Regular",
-        textAlign:'center'
+        textAlign: 'center'
     }, buttonMargin: {
         marginTop: '15%'
     }, codeFieldRoot: {
@@ -67,7 +67,9 @@ const styles = StyleSheet.create({
         marginHorizontal: MARGIN.smMargin,
     }, focusCell: {
         borderColor: COLORS.blue,
-    },
+    }, scrollViewStyle: {
+        backgroundColor: COLORS.white
+    }
 
 
 })

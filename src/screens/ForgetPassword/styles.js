@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: PADDINGS.mdPadding,
         paddingTop: '5%',
         alignItems: 'center',
-        paddingBottom:'1%'
+        paddingBottom: '1%'
     }, arrowButtonStyle: {
         elevation: RFValue(3)
     }, textHeaderStyle: {
-        marginLeft:RFValue(-15)
+        marginLeft: RFValue(-15)
     }, viewImage: {
         marginTop: '10%'
     }, imageStyle: {
@@ -29,11 +29,13 @@ const styles = StyleSheet.create({
         color: COLORS.darkGray,
         fontSize: FONTS.h5,
         fontFamily: "Amaranth-Regular",
-        textAlign:'center'
+        textAlign: 'center'
     }, textInputMargin: {
         marginTop: '15%'
     }, buttonMargin: {
         marginTop: '15%'
+    }, scrollViewStyle: {
+        backgroundColor: COLORS.white
     }
 
 })

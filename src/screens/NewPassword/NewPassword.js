@@ -6,7 +6,7 @@ import {
     , ScrollView
 } from 'react-native'
 import styles from './styles'
-import { COLORS} from "../../constants/Constants";
+import { COLORS } from "../../constants/Constants";
 import HeaderArrowAndWord from "../../components/HeaderArrowAndWord/HeaderArrowAndWord";
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput'
 import Appbutton from "../../components/Appbutton/Appbutton";
@@ -15,7 +15,7 @@ function NewPassword() {
 
     return (
 
-        <ScrollView >
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
             <View style={styles.container}>
                 <StatusBar backgroundColor={COLORS.blue} />
                 <HeaderArrowAndWord
@@ -26,7 +26,7 @@ function NewPassword() {
                 />
                 <View style={styles.viewForTextStyle}>
                     <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة{'\n'}مختلفه عن كلمه المرور المستخدمه{'\n'}سابقا</Text>
-                </View>               
+                </View>
                 <Reusabletextinput
                     placeholder="كلمه المرور القديمه"
                     right={
@@ -66,7 +66,7 @@ function NewPassword() {
                 />
                 <Appbutton
                     buttonText="حفظ"
-                    
+
                 />
             </View>
         </ScrollView>

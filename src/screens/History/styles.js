@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
         marginBottom: '10%'
     },afterEachCardMargin:{
         marginBottom: '5%'
+    },scrollViewStyle: {
+        backgroundColor: COLORS.white
     }
 
 })

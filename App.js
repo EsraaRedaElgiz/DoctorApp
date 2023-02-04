@@ -27,8 +27,10 @@ import History from './src/screens/History/History'
 import Appointment from './src/screens/Appointment/Appointment'
 import Prescription from './src/screens/Prescription/Prescription';
 import InrtoSlider from './src/screens/Intro/IntroSlider/IntroSlider'
+import SignUp from './src/screens/SignUp/SignUp'
+import Login from './src/screens/LogIn/LogIn'
 function App() {
-  return <InrtoSlider/>
+  return <Login/>
 }
 
 

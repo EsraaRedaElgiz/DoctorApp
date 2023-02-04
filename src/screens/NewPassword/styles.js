@@ -29,6 +29,8 @@ const styles = StyleSheet.create({
        marginBottom: '10%',
     },thirdTextInputMargin:{
         marginBottom:'30%'
+    },scrollViewStyle: {
+        backgroundColor: COLORS.white
     }
 
 

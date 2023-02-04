@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -8,23 +8,23 @@ import {
   Image,
 } from 'react-native';
 import styles from './styles';
-import {Checkbox} from 'react-native-paper';
-import {COLORS, ICONS} from '../../constants/Constants';
+import { Checkbox } from 'react-native-paper';
+import { COLORS, ICONS } from '../../constants/Constants';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5Pro from 'react-native-vector-icons/FontAwesome5Pro';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
-import {TextInput} from 'react-native-paper';
+import { TextInput } from 'react-native-paper';
 import Appbutton from '../../components/Appbutton/Appbutton';
-import {RFValue} from 'react-native-responsive-fontsize';
+import { RFValue } from 'react-native-responsive-fontsize';
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
 
 function LogIn() {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
 
   return (
-    <View style={styles.container}>
-      <StatusBar backgroundColor={COLORS.blue} />
-      <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
+      <View style={styles.container}>
+        <StatusBar backgroundColor={COLORS.blue} />
         <View style={styles.topViewStyle}>
           <ReusableArrowButton style={styles.custombuttonIconStyle} />
           <View style={styles.viewHeaderStyle}>
@@ -43,7 +43,7 @@ function LogIn() {
           <Reusabletextinput
             placeholder="عنوان البريد الالكتروني"
             keyboardType="email-address"
-            style={styles.firsttextinputmargin}
+            style={styles.eachtextinputmargin}
             bordercolor={COLORS.gray}
           />
           <Reusabletextinput
@@ -101,18 +101,21 @@ function LogIn() {
               />
             </TouchableOpacity>
           </View>
-          <Appbutton buttontext="متابعه" />
+          <Appbutton buttonText="متابعه"
+            changeButtonStyle={styles.buttonMargin}
+          />
           <View style={styles.viewForLastTextStyle}>
             <View>
-              <Text style={{color: COLORS.darkGray3}}>ليس لديك حساب ؟</Text>
+              <Text style={{ color: COLORS.darkGray3 }}>ليس لديك حساب ؟</Text>
             </View>
             <TouchableOpacity>
               <Text style={styles.bluetextstyle}> انشاء حساب </Text>
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
+
   );
 }
 export default LogIn;

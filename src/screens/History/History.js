@@ -7,7 +7,7 @@ import AppointmentAndHistoryComponent from '../../components/AppointmentAndHisto
 
 function History() {
     return (
-        <ScrollView >
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
             <View style={styles.container}>
                 <StatusBar backgroundColor={COLORS.blue} />
                 <HeaderArrowAndWord

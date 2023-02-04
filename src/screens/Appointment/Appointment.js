@@ -7,9 +7,9 @@ import AppointmentAndHistoryComponent from '../../components/AppointmentAndHisto
 
 function Appointment() {
     return (
-        <ScrollView  >
+        <ScrollView style={styles.scrollViewStyle} >
 
-            <View style={styles.container}>
+            <View showsVerticalScrollIndicator={false} style={styles.container}>
                 <StatusBar backgroundColor={COLORS.blue} />
                 <HeaderArrowAndWord
                     text="المواعيد"
@@ -54,30 +54,8 @@ function Appointment() {
                     status="م"
                     style={styles.afterEachCardMargin}
                 />
-                <AppointmentAndHistoryComponent
-                    doctorName="سامي علي"
-                    doctorSpeciality="الطب العام والداخلي"
-                    dateShow={true}
-                    day="٤"
-                    month="سبتمبر"
-                    year="٢٠٢٢"
-                    timeShow={true}
-                    time="٣٠:٥"
-                    status="م"
-                    style={styles.afterEachCardMargin}
-                />
-                <AppointmentAndHistoryComponent
-                    doctorName="سامي علي"
-                    doctorSpeciality="الطب العام والداخلي"
-                    dateShow={true}
-                    day="٤"
-                    month="سبتمبر"
-                    year="٢٠٢٢"
-                    timeShow={true}
-                    time="٣٠:٥"
-                    status="م"
-                    style={styles.afterEachCardMargin}
-                />
+
+
 
 
             </View>

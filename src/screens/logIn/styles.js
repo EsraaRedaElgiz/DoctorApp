@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import {
   COLORS,
   FONTS,
@@ -6,22 +6,21 @@ import {
   PADDINGS,
   MARGIN,
 } from '../../constants/Constants';
-import {RFValue} from 'react-native-responsive-fontsize';
-const {height, width} = Dimensions.get('window');
+import { RFValue } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: COLORS.blue,
   },
   topViewStyle: {
     //minHeight: height * .2,
     paddingHorizontal: PADDINGS.mdPadding,
-    marginBottom: height * 0.101,
-    paddingTop: height * 0.04,
+    paddingTop: '5%',
+    flex: 1,
+    paddingBottom: '20%'
   },
   custombuttonIconStyle: {
-    marginBottom: height * 0.04,
+    marginBottom: '10%',
   },
   viewHeaderStyle: {
     width: '100%',
@@ -39,27 +38,22 @@ const styles = StyleSheet.create({
     fontFamily: 'Amaranth-Regular',
   },
   viewAfterHeaderStyle: {
-    minHeight: height * 0.6832,
-    //flexGrow: 1,
     backgroundColor: COLORS.white,
     borderTopRightRadius: RFValue(100),
     paddingHorizontal: PADDINGS.mdPadding,
-  },
-  iconStyle: {
-    // marginTop:height*.02 ,
-  },
-  firsttextinputmargin: {
-    marginTop: height * 0.08,
+    flex: 5,
+    paddingTop: '15%',
+    paddingBottom: '1%'
   },
   eachtextinputmargin: {
-    marginTop: height * 0.021,
+    marginBottom: '5%',
   },
   viewForfirstTextAfterTextinputs: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginVertical: height * 0.03,
+    marginBottom: '7%',
   },
   textAfterTextinputsStyle: {
     color: COLORS.darkGray2,
@@ -71,8 +65,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    // marginVertical: height * .02,
-    marginTop: height * 0.02,
   },
   bluetextstyle: {
     color: COLORS.blue,
@@ -92,10 +84,10 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: height * 0.0535,
+    marginVertical: '15%',
   },
   viewforheaderstyle: {
-    marginBottom: height * 0.01,
+    marginBottom: '2%',
   },
   lineviewstyle: {
     width: '45%',
@@ -118,6 +110,10 @@ const styles = StyleSheet.create({
   },
   orWordStyle: {
     color: COLORS.darkGray2,
-  },
+  }, buttonMargin: {
+    marginBottom: '5%'
+  }, scrollViewStyle: {
+    backgroundColor: COLORS.white
+  }
 });
 export default styles;
