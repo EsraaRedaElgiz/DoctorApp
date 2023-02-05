@@ -50,26 +50,26 @@ function Visa(props) {
 
 const styles = StyleSheet.create({
   visa: {
-    height: height * 0.28,
+    height: height * 0.25,
     borderRadius: RFValue(10),
     padding: RFValue(10),
     marginBottom: RFValue(10),
-    backgroundColor: COLORS.gray,
+    backgroundColor: COLORS.lightGray4,
   },
   visaImage: {
     width: RFValue(60),
     height: height * 0.05,
-    marginBottom: RFValue(40),
+    marginBottom: RFValue(30),
     borderRadius: RFValue(5),
   },
   visaNumberView: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginBottom: RFValue(35),
+    marginBottom: RFValue(25),
   },
   visaNumber: {
     fontSize: FONTS.h5,
-    color: COLORS.white,
+    color: COLORS.darkGray,
     fontWeight: 'bold',
   },
   visaData: {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   visaTextData: {
     fontSize: FONTS.h6,
     fontWeight: 'bold',
-    color: COLORS.white,
+    color: COLORS.darkGray,
   },
   date: {
     alignItems: 'center',

@@ -45,11 +45,11 @@ const styles = StyleSheet.create({
   openButton: {
     width: RFValue(50),
     height: RFValue(26),
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.lightBlue,
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 1,
-    borderRadius: RFValue(4),
+    borderRadius: RFValue(20),
   },
   openText: {
     fontSize: FONTS.h6,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   modal: {
     flex: 1,
     padding: PADDINGS.smPadding,
-    backgroundColor: 'rgba(0,0,0,0.7)',
+    backgroundColor: 'rgba(30,31,35 ,0.8)',
   },
   wrapperView: {
     flexDirection: 'row',
@@ -86,6 +86,25 @@ const styles = StyleSheet.create({
   imageStyle: {
     height: RFValue(250),
     width: '100%',
+  },
+  iconView: {
+    backgroundColor: '#fff',
+    width: RFValue(25),
+    height: RFValue(25),
+    borderRadius: RFValue(12.5),
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'flex-end',
+  },
+  rowTableStyle: {
+    borderWidth: 1,
+    height: height * 0.05,
+    backgroundColor: COLORS.lightGray3,
+    borderColor: COLORS.gray,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: PADDINGS.smPadding,
   },
 });
 

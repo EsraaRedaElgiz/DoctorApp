@@ -24,7 +24,7 @@ import {
   PADDINGS,
 } from '../../constants/Constants';
 import {RFValue} from 'react-native-responsive-fontsize';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/Feather';
 const {height} = Dimensions.get('window');
 
 function Prescription(props) {
@@ -73,17 +73,7 @@ function Prescription(props) {
         </View>
         <Text style={styles.title}>التحاليل</Text>
         <View style={styles.analysis}>
-          <View
-            style={{
-              borderWidth: 1,
-              height: height * 0.05,
-              backgroundColor: COLORS.white,
-              borderColor: COLORS.gray,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              paddingHorizontal: PADDINGS.smPadding,
-            }}>
+          <View style={[styles.rowTableStyle, {backgroundColor: COLORS.white}]}>
             <Text style={styles.analysisText}>تحاليل</Text>
             <TouchableOpacity
               onPress={() => setVisible(true)}
@@ -91,17 +81,7 @@ function Prescription(props) {
               <Text style={styles.openText}>افتح</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              borderWidth: 1,
-              height: height * 0.05,
-              backgroundColor: COLORS.lightGray3,
-              borderColor: COLORS.gray,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              paddingHorizontal: PADDINGS.smPadding,
-            }}>
+          <View style={styles.rowTableStyle}>
             <Text style={styles.analysisText}>اشاعات</Text>
             <TouchableOpacity style={styles.openButton}>
               <Text style={styles.openText}>اضافة</Text>
@@ -124,11 +104,9 @@ function Prescription(props) {
             <TouchableOpacity
               onPress={() => setVisible(false)}
               style={{flex: 1}}>
-              <Icon
-                name="closecircleo"
-                color={COLORS.white}
-                size={ICONS.lgIcon}
-              />
+              <View style={styles.iconView}>
+                <Icon name="x" color={COLORS.gray} size={ICONS.mdIcon} />
+              </View>
             </TouchableOpacity>
           </View>
           <View style={styles.imageView}>
