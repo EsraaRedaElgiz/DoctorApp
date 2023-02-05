@@ -12,9 +12,9 @@ const {height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   ScrollViewStyle: {
+    flex: 1,
     padding: PADDINGS.smPadding,
     paddingVertical: PADDINGS.xlPadding,
-    flex: 1,
   },
   container: {
     flex: 1,
@@ -57,9 +57,9 @@ const styles = StyleSheet.create({
     width: RFValue(50),
     height: RFValue(50),
     borderRadius: RFValue(5),
-    marginHorizontal: '5%',
     backgroundColor: COLORS.lightGray2,
-    elevation: RFValue(3),
+    elevation: RFValue(5),
+    marginBottom: RFValue(10),
   },
   imageIcon: {
     width: RFValue(60),
