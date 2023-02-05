@@ -27,8 +27,9 @@ import Prescription from './src/screens/Prescription/Prescription';
 import InrtoSlider from './src/screens/Intro/IntroSlider/IntroSlider';
 import SignUp from './src/screens/Signup/signUp';
 import LogIn from './src/screens/LogIn/logIn';
+import SupportTeam from './src/screens/SupportTeam/SupportTeam';
 function App() {
-  return <EditPersonDetails />;
+  return <SupportTeam />;
 }
 
 export default App;

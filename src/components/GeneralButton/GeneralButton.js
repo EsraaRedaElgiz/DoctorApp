@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     fontSize: FONTS.h4,
     fontFamily: 'Amaranth',
     color: COLORS.white,
+    fontWeight: 'bold',
   },
 });
 export default GeneralButton;
