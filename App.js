@@ -24,7 +24,7 @@ import Payment from './src/screens/Payment/Payment';
 import NewPassword from './src/screens/NewPassword/NewPassword';
 import Prescription from './src/screens/Prescription/Prescription';
 function App() {
-  return <Prescription />;
+  return <EditPersonDetails />;
 }
 
 export default App;

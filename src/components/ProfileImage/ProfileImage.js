@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/AntDesign';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import {MARGIN, COLORS, FONTS, ICONS} from '../../constants/Constants';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -83,7 +84,11 @@ function ProfileImage(props) {
           <Text style={styles.name}>عبدالرحمن محمد عياد</Text>
           {iconName ? (
             <TouchableOpacity>
-              <Icon name={iconName} size={ICONS.smIcon} style={styles.icon} />
+              <EvilIcons
+                name={iconName}
+                size={ICONS.smIcon}
+                style={styles.icon}
+              />
             </TouchableOpacity>
           ) : null}
         </View>

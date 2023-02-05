@@ -7,6 +7,7 @@ import ProfileImage from '../../components/ProfileImage/ProfileImage';
 import {COLORS, ICONS, MARGIN} from '../../constants/Constants';
 import styles from './EditPersonDetailsStyle';
 import Icon from 'react-native-vector-icons/AntDesign';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import {RFValue} from 'react-native-responsive-fontsize';
 import SelectDropdown from 'react-native-select-dropdown';
 
@@ -24,7 +25,7 @@ function EditPersonDetails(props) {
   return (
     <GeneralPage>
       <View style={styles.conatiner}>
-        <ProfileImage iconName="edit" nameAfterImage iconOnImage />
+        <ProfileImage iconName="pencil" nameAfterImage iconOnImage />
         <View style={styles.dropDownView}>
           <SelectDropdown
             renderDropdownIcon={() => (
