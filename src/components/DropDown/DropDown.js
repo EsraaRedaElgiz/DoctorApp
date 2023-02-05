@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import {COLORS, ICONS, MARGIN} from '../../constants/Constants';
+import {COLORS, FONTS, ICONS, MARGIN} from '../../constants/Constants';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {RFValue} from 'react-native-responsive-fontsize';
 import SelectDropdown from 'react-native-select-dropdown';
@@ -13,7 +13,12 @@ function DropDown(props) {
         renderDropdownIcon={() => (
           <Icon name="caretdown" size={ICONS.xsIcon} color={COLORS.gray} />
         )}
-        buttonTextStyle={{textAlign: 'left'}}
+        buttonTextStyle={{
+          textAlign: 'left',
+          color: COLORS.darkGray,
+          fontSize: FONTS.h5,
+          fontFamily: 'Amaranth-Regular',
+        }}
         rowTextStyle={{textAlign: 'right'}}
         buttonStyle={styles.buttonStyle}
         defaultButtonText={placeholder}
