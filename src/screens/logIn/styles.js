@@ -31,15 +31,17 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     fontSize: FONTS.h3,
     fontFamily: 'Amaranth-Regular',
+    textAlign:'center'
   },
   secondTextHeaderStyle: {
     color: COLORS.white,
     fontSize: FONTS.h4,
     fontFamily: 'Amaranth-Regular',
+    textAlign:'center'
   },
   viewAfterHeaderStyle: {
     backgroundColor: COLORS.white,
-    borderTopRightRadius: RFValue(100),
+    borderTopRightRadius: RFValue(85),
     paddingHorizontal: PADDINGS.mdPadding,
     flex: 5,
     paddingTop: '15%',

@@ -9,7 +9,7 @@ import styles from './styles'
 import { COLORS } from "../../constants/Constants";
 import { RFValue } from "react-native-responsive-fontsize";
 import HeaderArrowAndWord from "../../components/HeaderArrowAndWord/HeaderArrowAndWord";
-import Appbutton from "../../components/Appbutton/Appbutton";
+import GeneralButton from "../../components/GeneralButton/GeneralButton";
 import Entypo from "react-native-vector-icons/Entypo";
 import {
     CodeField,
@@ -40,7 +40,7 @@ function VertificationCode() {
                     </View>
                 </View>
                 <View style={styles.viewForTextStyle}>
-                    <Text style={styles.textStyle} >قم بإدخال رمز التأكيد المرسل لك عبر{'\n'}عبر البريد الالكتروني</Text>
+                    <Text style={styles.textStyle} >قم بإدخال رمز التأكيد المرسل لك عبر عبر البريد الالكتروني</Text>
                 </View>
                 <View style={styles.viewCodeFieldStyle}>
                     <CodeField
@@ -63,10 +63,9 @@ function VertificationCode() {
                         )}
                     />
                 </View>
-                <Appbutton
-                    buttonText="تأكيد"
-                    changeButtonStyle={styles.buttonMargin}
-                />
+
+                <GeneralButton title="تأكيد" style={styles.buttonMargin} />
+
             </View>
         </ScrollView>
     )

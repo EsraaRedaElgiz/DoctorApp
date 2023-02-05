@@ -23,14 +23,11 @@ const styles = StyleSheet.create({
     }, viewTextStyle: {
         marginBottom: '10%'
     }, textStyle: {
-        color: COLORS.darkGray,
+        color: COLORS.blue,
         fontSize: FONTS.h4,
         fontFamily: "Amaranth-Regular",
     }, marginAfterFirstButton: {
         marginBottom: '10%',
-        alignSelf: 'center'
-    }, secondButtomStyle: {
-        alignSelf: 'center'
     }, scrollViewStyle: {
         backgroundColor: COLORS.white
     }

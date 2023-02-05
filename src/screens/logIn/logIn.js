@@ -10,13 +10,11 @@ import {
 import styles from './styles';
 import { Checkbox } from 'react-native-paper';
 import { COLORS, ICONS } from '../../constants/Constants';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome5Pro from 'react-native-vector-icons/FontAwesome5Pro';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
 import { TextInput } from 'react-native-paper';
-import Appbutton from '../../components/Appbutton/Appbutton';
-import { RFValue } from 'react-native-responsive-fontsize';
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
+import GeneralButton from "../../components/GeneralButton/GeneralButton";
 
 function LogIn() {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
@@ -101,8 +99,9 @@ function LogIn() {
               />
             </TouchableOpacity>
           </View>
-          <Appbutton buttonText="متابعه"
-            changeButtonStyle={styles.buttonMargin}
+          <GeneralButton
+            title="متابعه"
+            style={styles.buttonMargin}
           />
           <View style={styles.viewForLastTextStyle}>
             <View>

@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
         fontFamily: "Amaranth-Regular",
         textAlign: 'center'
     }, buttonMargin: {
-        marginTop: '15%'
+        marginTop: '15%',
+        width:'100%'
     }, codeFieldRoot: {
         marginTop: '15%',
     }, viewCodeFieldStyle: {

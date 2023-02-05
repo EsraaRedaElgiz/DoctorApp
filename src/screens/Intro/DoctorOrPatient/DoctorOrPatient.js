@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import styles from './styles'
 import { COLORS, } from "../../../constants/Constants";
-import Appbutton from "../../../components/Appbutton/Appbutton";
+import GeneralButton from "../../../components/GeneralButton/GeneralButton";
 function DoctorOrPatient() {
     return (
         <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
@@ -20,13 +20,12 @@ function DoctorOrPatient() {
                 <View style={styles.viewTextStyle}>
                     <Text style={styles.textStyle}>أنا...</Text>
                 </View>
-                <Appbutton
-                    buttonText="مريض"
-                    changeButtonStyle={styles.marginAfterFirstButton}
+                <GeneralButton
+                    title="مريض"
+                    style={styles.marginAfterFirstButton}
                 />
-                <Appbutton
-                    buttonText="دكتور"
-                    changeButtonStyle={styles.secondButtomStyle}
+                <GeneralButton
+                    title="دكتور"
 
                 />
 

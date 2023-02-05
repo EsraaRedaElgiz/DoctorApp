@@ -9,7 +9,7 @@ import styles from './styles'
 import { COLORS } from "../../constants/Constants";
 import HeaderArrowAndWord from "../../components/HeaderArrowAndWord/HeaderArrowAndWord";
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput'
-import Appbutton from "../../components/Appbutton/Appbutton";
+import GeneralButton from "../../components/GeneralButton/GeneralButton";
 import { TextInput } from 'react-native-paper';
 function NewPassword() {
 
@@ -25,7 +25,7 @@ function NewPassword() {
                     textStyle={styles.textHeaderStyle}
                 />
                 <View style={styles.viewForTextStyle}>
-                    <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة{'\n'}مختلفه عن كلمه المرور المستخدمه{'\n'}سابقا</Text>
+                    <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة مختلفه عن كلمه المرور المستخدمه المستخدمه سابقا</Text>
                 </View>
                 <Reusabletextinput
                     placeholder="كلمه المرور القديمه"
@@ -64,8 +64,8 @@ function NewPassword() {
                     secureTextEntry
                     style={styles.thirdTextInputMargin}
                 />
-                <Appbutton
-                    buttonText="حفظ"
+                <GeneralButton
+                    title="حفظ"
 
                 />
             </View>

@@ -15,42 +15,37 @@ const styles = StyleSheet.create({
         fontFamily: "Amaranth-Regular",
         alignSelf: 'center',
         textAlign: 'center',
-        fontWeight:'bold'
+        fontWeight: 'bold'
     }, activeDotStyle: {
         backgroundColor: COLORS.blue,
         width: RFValue(30),
-        marginTop:RFValue(-60)
-    },dotStyle:{
-        marginTop:RFValue(-60),
-        backgroundColor:COLORS.gray
-    } ,
+        marginTop: RFValue(-60)
+    }, dotStyle: {
+        marginTop: RFValue(-60),
+        backgroundColor: COLORS.gray
+    },
     nextButtonStyle: {
-        backgroundColor: COLORS.blue,
-        borderRadius: RADIUS.xsRadius,
-        borderWidth: RFValue(1),
-        borderColor: COLORS.blue,
+        padding: PADDINGS.smPadding,
         justifyContent: 'center',
         alignItems: 'center',
-        height: RFValue(50),
-        width: '100%',
-    },doneButtonStyle:{
-        backgroundColor: COLORS.blue,
         borderRadius: RADIUS.xsRadius,
-        borderWidth: RFValue(1),
-        borderColor: COLORS.blue,
+        backgroundColor: COLORS.blue,
+        width: '100%',
+    }, doneButtonStyle: {
+        padding: PADDINGS.smPadding,
         justifyContent: 'center',
         alignItems: 'center',
-        height: RFValue(50),
+        borderRadius: RADIUS.xsRadius,
+        backgroundColor: COLORS.blue,
         width: '100%',
-    },textNextAndDoneStyle: {
-        color: COLORS.white,
+    }, textNextAndDoneStyle: {
         fontSize: FONTS.h4,
-        fontFamily: 'Amaranth-Regular',
-        fontWeight: 'bold'
+        fontFamily: 'Amaranth',
+        color: COLORS.white,
     }, imageStyle: {
         width: '100%',
         height: '60%',
-        resizeMode:'contain'
+        resizeMode: 'contain'
     }
 
 })

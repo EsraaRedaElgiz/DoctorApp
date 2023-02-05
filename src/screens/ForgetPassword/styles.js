@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     }, textInputMargin: {
         marginTop: '15%'
     }, buttonMargin: {
-        marginTop: '15%'
+        marginTop: '15%',
+        width:'100%'
     }, scrollViewStyle: {
         backgroundColor: COLORS.white
     }

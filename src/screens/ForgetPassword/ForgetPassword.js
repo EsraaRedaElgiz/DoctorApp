@@ -4,7 +4,7 @@ import styles from './styles'
 import { COLORS } from "../../constants/Constants";
 import HeaderArrowAndWord from "../../components/HeaderArrowAndWord/HeaderArrowAndWord";
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput'
-import Appbutton from "../../components/Appbutton/Appbutton";
+import GeneralButton from "../../components/GeneralButton/GeneralButton";
 function ForgetPassword() {
     return (
         <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle} >
@@ -20,17 +20,16 @@ function ForgetPassword() {
                     <Image source={require('../../assets/Images/ForgetPassword.png')} style={styles.imageStyle} />
                 </View>
                 <View style={styles.viewForTextStyle}>
-                    <Text style={styles.textStyle} >قم بإدخال بريدك الالكتروني او رقم الهاتف{'\n'}لارسال رمز التأكيد</Text>
+                    <Text style={styles.textStyle} >قم بإدخال بريدك الالكتروني او رقم الهاتف لارسال رمز التأكيد</Text>
                 </View>
                 <Reusabletextinput
                     style={styles.textInputMargin}
                     placeholder="عنوان البريد الالكتروني/رقم الهاتف"
                     bordercolor={COLORS.gray}
                 />
-                <Appbutton
-                    buttonText="ارسال"
-                    changeButtonStyle={styles.buttonMargin}
-                />
+
+                <GeneralButton title="ارسال" style={styles.buttonMargin} />
+
             </View>
         </ScrollView>
     )

@@ -8,11 +8,10 @@ import {
 } from 'react-native';
 import styles from './style';
 import { COLORS, FONTS, ICONS, MARGIN } from '../../constants/Constants';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
 import { TextInput } from 'react-native-paper';
-import Appbutton from '../../components/Appbutton/Appbutton';
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
+import GeneralButton from "../../components/GeneralButton/GeneralButton";
 
 function SignUp() {
   return (
@@ -97,9 +96,9 @@ function SignUp() {
             </TouchableOpacity>
           </View>
 
-          <Appbutton
-            changeButtonStyle={styles.buttonMargin}
-            buttonText="متابعه" />
+          <GeneralButton
+            style={styles.buttonMargin}
+            title="متابعه" />
           <View style={styles.viewForLastTextStyle}>
             <View>
               <Text style={styles.textAfterTextinputsStyle}>

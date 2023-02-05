@@ -30,7 +30,7 @@ import InrtoSlider from './src/screens/Intro/IntroSlider/IntroSlider'
 import SignUp from './src/screens/SignUp/SignUp'
 import Login from './src/screens/LogIn/LogIn'
 function App() {
-  return <Login/>
+  return <MedicalSheet/>
 }
 
 

@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
     }, eachLineMargin: {
         marginBottom: '2%'
     }, doctorNameStyle: {
-        fontWeight: 'bold',
         fontSize: FONTS.h5,
         color: COLORS.black
     }, specialityTextStyle: {
@@ -109,7 +108,6 @@ const styles = StyleSheet.create({
     }, eachItemMarginInDateAndTimeContainers: {
         marginHorizontal: RFValue(3)
     }, eachTextStyleInDateAndTimeContainers: {
-        fontWeight: 'bold',
         fontSize: FONTS.h5,
         color: COLORS.black
     }, viewTimeStyle: {

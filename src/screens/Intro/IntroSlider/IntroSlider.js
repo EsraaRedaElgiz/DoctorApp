@@ -8,13 +8,13 @@ function IntroSlider() {
     const slides = [
         {
             key: 1,
-            text: "لنبدأ عيش حياة صحية\n وبصحة جيدة الآن",
+            text: "لنبدأ عيش حياة صحية و بصحة جيدة الآن",
             image: require('../../../assets/Images/intro1.png'),
             backgroundColor: COLORS.white,
         },
         {
             key: 2,
-            text: "قم بحجز موعد مع طبيب\n في أي مجال",
+            text: "قم بحجز موعد مع طبيب في أي مجال",
             image: require('../../../assets/Images/intro2.png'),
             backgroundColor: COLORS.white,
         },

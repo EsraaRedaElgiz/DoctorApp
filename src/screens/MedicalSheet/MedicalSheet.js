@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -9,13 +9,32 @@ import {
   SafeAreaView,
 } from 'react-native';
 import styles from './styles';
-import { COLORS, FONTS, ICONS, MARGIN } from '../../constants/Constants';
+import { COLORS, FONTS, ICONS, MARGIN, RADIUS } from '../../constants/Constants';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
-import Appbutton from '../../components/Appbutton/Appbutton';
 import HeaderArrowAndWord from '../../components/HeaderArrowAndWord/HeaderArrowAndWord'
 import ProfileImage from '../../components/ProfileImage/ProfileImage';
+import GeneralButton from '../../components/GeneralButton/GeneralButton';
+import { SelectList } from 'react-native-dropdown-select-list'
+
 
 function MedicalSheet() {
+  const [bloodType, setBloodType] = useState("")
+  const [typeSelected, setTypeSelected] = useState("");
+  const blood = [
+    { key: '1', value: "A+" },
+    { key: '2', value: "A-" },
+    { key: '3', value: "B+" },
+    { key: '4', value: "B-" },
+    { key: '5', value: "O+" },
+    { key: '6', value: "O-" },
+    { key: '7', value: "AB+" },
+    { key: '8', value: "AB-" }
+  ]
+  const type = [
+    { key: '1', value: "ذكر" },
+    { key: '2', value: 'أنثي' },
+  ]
+
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
       <View style={styles.container}>
@@ -36,15 +55,21 @@ function MedicalSheet() {
         </View>
 
         <View style={styles.viewAfterHeaderStyle}>
-          <Reusabletextinput
+          <SelectList
+            setSelected={(val) => setBloodType(val)}
+            data={blood}
+            save="value"
+            boxStyles={styles.selectBoxStyle}
+            search={false}
             placeholder="فصيلة الدم"
-            style={styles.eachTextInputMargin}
-            bordercolor={COLORS.gray}
+            inputStyles={styles.inputStyle}
+            dropdownStyles={styles.dropDownListHeight}
+
           />
           <Reusabletextinput
             placeholder="الوزن"
             keyboardType="phone-pad"
-            style={styles.eachTextInputMargin}
+            style={styles.firstTextInoutMargun}
             bordercolor={COLORS.gray}
           />
           <Reusabletextinput
@@ -56,17 +81,22 @@ function MedicalSheet() {
           <Reusabletextinput
             placeholder="السن"
             style={styles.eachTextInputMargin}
-
             bordercolor={COLORS.gray}
           />
-          <Reusabletextinput
-            placeholder="النوع"
-            style={styles.lastTextInputMargin}
-            bordercolor={COLORS.gray}
+
+          <SelectList
+            setSelected={(val) => setTypeSelected(val)}
+            data={type}
+            save="value"
+            boxStyles={styles.selectBoxStyle}
+            search={false}
+            placeholder="تحديد النوع"
+            inputStyles={styles.inputStyle}
+            dropdownStyles={styles.dropDownListHeight}
+
 
           />
-
-          <Appbutton buttonText="تأكيد" />
+          <GeneralButton title="تأكيد" style={styles.buttonMargin} />
 
         </View>
       </View>
