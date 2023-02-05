@@ -10,12 +10,13 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.white,
         paddingHorizontal: PADDINGS.mdPadding,
         paddingTop: '5%',
-        paddingBottom: '1%'
+        paddingBottom: '1%',
+
     }, viewForImageStyle: {
         marginBottom: '10%',
         alignItems: 'center',
         justifyContent: 'center',
-        width:'100%'
+        width: '100%'
     }, imageStyle: {
         width: '100%',
         height: RFValue(350)
@@ -30,6 +31,8 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     }, secondButtomStyle: {
         alignSelf: 'center'
+    }, scrollViewStyle: {
+        backgroundColor: COLORS.white
     }
 
 

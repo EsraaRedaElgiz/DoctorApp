@@ -1,0 +1,68 @@
+import React from 'react';
+import { Text, View, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native'
+import styles from './styles'
+import AppIntroSlider from 'react-native-app-intro-slider';
+import { COLORS } from '../../../constants/Constants'
+
+function IntroSlider() {
+    const slides = [
+        {
+            key: 1,
+            text: "لنبدأ عيش حياة صحية\n وبصحة جيدة الآن",
+            image: require('../../../assets/Images/intro1.png'),
+            backgroundColor: COLORS.white,
+        },
+        {
+            key: 2,
+            text: "قم بحجز موعد مع طبيب\n في أي مجال",
+            image: require('../../../assets/Images/intro2.png'),
+            backgroundColor: COLORS.white,
+        },
+        {
+            key: 3,
+            text: "احتفظ بسجل لأمراضك",
+            image: require('../../../assets/Images/intro3.png'),
+            backgroundColor: COLORS.white,
+        }
+    ];
+    const renderItem = ({ item }) => {
+        return (
+
+            <View style={styles.slide}>
+                <Image source={item.image} style={styles.imageStyle} />
+                <Text style={styles.text}>{item.text}</Text>
+            </View>
+        );
+    }
+    const renderNextButton = () => {
+        return (
+            <View style={styles.nextButtonStyle}>
+                <Text style={styles.textNextAndDoneStyle}>التالي</Text>
+            </View>
+        );
+    };
+    const renderDoneButton = () => {
+        return (
+            <View style={styles.doneButtonStyle}>
+                <Text style={styles.textNextAndDoneStyle}>التالي</Text>
+            </View>
+        );
+    };
+    return (
+        <View style={{ flex: 1 }}>
+            <StatusBar backgroundColor={COLORS.blue} />
+            <AppIntroSlider
+                renderItem={renderItem}
+                data={slides}
+                renderDoneButton={renderDoneButton}
+                renderNextButton={renderNextButton}
+                bottomButton={true}
+                activeDotStyle={styles.activeDotStyle}
+                dotStyle={styles.dotStyle}
+            />
+
+        </View>
+
+    )
+}
+export default IntroSlider;

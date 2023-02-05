@@ -8,7 +8,8 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function ProfileImage(props) {
-  const {iconName, iconOnImage, nameAfterImage, selectedImage} = props;
+  const {iconName, iconOnImage, nameAfterImage, selectedImage, iconBgColor} =
+    props;
   return (
     <View style={styles.profileView}>
       {selectedImage ? (
@@ -23,7 +24,7 @@ function ProfileImage(props) {
               source={require('../../assets/Images/profile.png')}
             />
             <TouchableOpacity style={styles.buttonEditIconOnImage}>
-              <FontAwesome5 name="pen" />
+              <FontAwesome5 name="pen" size={ICONS.xsIcon} />
             </TouchableOpacity>
           </View>
         ) : (
@@ -54,8 +55,16 @@ function ProfileImage(props) {
               color={COLORS.darkGray}
             />
           </View>
-          <TouchableOpacity style={styles.buttonEditIconOnImage}>
-            <FontAwesome5 name="pen" />
+          <TouchableOpacity
+            style={[
+              styles.buttonEditIconOnImage,
+              {
+                backgroundColor: iconBgColor
+                  ? COLORS.lightBlue
+                  : COLORS.lightGray,
+              },
+            ]}>
+            <FontAwesome5 name="pen" size={ICONS.xsIcon} />
           </TouchableOpacity>
         </View>
       ) : (
@@ -84,9 +93,9 @@ function ProfileImage(props) {
           <Text style={styles.name}>عبدالرحمن محمد عياد</Text>
           {iconName ? (
             <TouchableOpacity>
-              <EvilIcons
+              <FontAwesome5
                 name={iconName}
-                size={ICONS.smIcon}
+                size={ICONS.xsIcon}
                 style={styles.icon}
               />
             </TouchableOpacity>

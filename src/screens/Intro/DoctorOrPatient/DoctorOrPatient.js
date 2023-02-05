@@ -7,11 +7,11 @@ import {
     , ScrollView
 } from 'react-native'
 import styles from './styles'
-import { COLORS,} from "../../../constants/Constants";
+import { COLORS, } from "../../../constants/Constants";
 import Appbutton from "../../../components/Appbutton/Appbutton";
 function DoctorOrPatient() {
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
             <View style={styles.container}>
                 <StatusBar backgroundColor={COLORS.blue} />
                 <View style={styles.viewForImageStyle}>

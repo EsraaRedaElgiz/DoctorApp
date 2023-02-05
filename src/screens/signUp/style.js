@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import {
   COLORS,
   FONTS,
@@ -6,31 +6,20 @@ import {
   PADDINGS,
   MARGIN,
 } from '../../constants/Constants';
-import {RFValue} from 'react-native-responsive-fontsize';
-const {height, width} = Dimensions.get('window');
+import { RFValue } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: COLORS.blue,
   },
   topViewStyle: {
-    //minHeight: height * .2,
-    marginBottom: height * 0.061,
+    marginBottom: '10%',
     paddingHorizontal: PADDINGS.mdPadding,
-    paddingTop: height * 0.04,
-  },
-  buttonIconStyle: {
-    width: RFValue(30),
-    height: RFValue(30),
-    borderRadius: RFValue(15),
-    backgroundColor: COLORS.white,
-    marginLeft: '5%',
-    marginTop: height * 0.04,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  viewHeaderStyle: {
+    paddingTop: "5%",
+    flex: 1
+  }, afterArrowButtonMargin: {
+    marginBottom: '5%'
+  }, viewHeaderTextStyle: {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -46,44 +35,42 @@ const styles = StyleSheet.create({
     fontFamily: 'Amaranth-Regular',
   },
   viewAfterHeaderStyle: {
-    minHeight: height * 0.7632,
-    //flexGrow: 1,
+
     backgroundColor: COLORS.white,
     borderTopRightRadius: RFValue(100),
     paddingHorizontal: PADDINGS.mdPadding,
-  },
-  firsttextinputmargin: {
-    marginTop: height * 0.08,
-  },
-  eachtextinputmargin: {
-    marginTop: height * 0.021,
+    flex: 5,
+    paddingTop: '15%',
+    paddingBottom: '1%'
+
+  }, eachtextinputmargin: {
+    marginBottom: '5%',
   },
   viewForfirstTextAfterTextinputs: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: height * 0.03,
+    marginTop: '3%',
   },
   viewForSecondTextAfterTextinputs: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: height * 0.03,
+    marginBottom: '8%',
   },
   textAfterTextinputsStyle: {
     color: COLORS.darkGray3,
     fontSize: FONTS.h6,
     fontFamily: 'Amaranth-Regular',
+    textAlign: 'center'
   },
   viewForLastTextStyle: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    // marginVertical: height * .0225,
-    marginTop: height * 0.0225,
   },
   bluetextstyle: {
     color: COLORS.blue,
@@ -91,7 +78,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Amaranth-Regular',
   },
   viewforheaderstyle: {
-    marginBottom: height * 0.01,
-  },
+    marginBottom: '2%',
+  }, buttonMargin: {
+    marginBottom: '5%'
+  }, scrollViewStyle: {
+    backgroundColor: COLORS.white
+  }
 });
 export default styles;

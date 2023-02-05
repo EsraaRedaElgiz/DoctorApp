@@ -8,9 +8,9 @@ const { height, width } = Dimensions.get('window');
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
 
 function HeaderArrowAndWord(props) {
-    const { text, textColor,textStyle, arrowButtonStyle } = props
+    const {style, text, textColor,textStyle, arrowButtonStyle } = props
     return (
-        <View style={[styles.container]}>
+        <View style={[styles.container,style]}>
 
             <ReusableArrowButton style={arrowButtonStyle} />
             <View>

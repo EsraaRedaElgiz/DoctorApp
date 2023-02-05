@@ -27,11 +27,13 @@ const styles = StyleSheet.create({
     }, firstTextInputMargin: {
         marginBottom: '10%',
     }, secondTextInputMargin: {
-       marginBottom: '10%',
-    },viewBetweenLastTextInputAndButton:{
+        marginBottom: '10%',
+    }, viewBetweenLastTextInputAndButton: {
         minHeight: RFValue(50),
-        marginBottom:'30%'
+        marginBottom: '30%'
 
+    }, scrollViewStyle: {
+        backgroundColor: COLORS.white
     }
 
 

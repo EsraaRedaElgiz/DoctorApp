@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import {
     Text,
     View,
@@ -6,7 +6,7 @@ import {
     , ScrollView
 } from 'react-native'
 import styles from './styles'
-import { COLORS} from "../../constants/Constants";
+import { COLORS } from "../../constants/Constants";
 import { RFValue } from "react-native-responsive-fontsize";
 import HeaderArrowAndWord from "../../components/HeaderArrowAndWord/HeaderArrowAndWord";
 import Appbutton from "../../components/Appbutton/Appbutton";
@@ -25,7 +25,7 @@ function VertificationCode() {
         setValue,
     });
     return (
-        <ScrollView >
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
             <View style={styles.container}>
                 <StatusBar backgroundColor={COLORS.blue} />
                 <HeaderArrowAndWord
@@ -36,12 +36,11 @@ function VertificationCode() {
                 />
                 <View style={styles.viewImage}>
                     <View style={styles.viewBlueStyle}>
-                    <Entypo name="check" size={RFValue(100)} color={COLORS.white}/>
+                        <Entypo name="check" size={RFValue(100)} color={COLORS.white} />
                     </View>
                 </View>
                 <View style={styles.viewForTextStyle}>
-                    <Text style={styles.textStyle} >قم بإدخال رمز التأكيد المرسل لك عبر</Text>
-                    <Text style={styles.textStyle}>عنوان البريد الالكتروني</Text>
+                    <Text style={styles.textStyle} >قم بإدخال رمز التأكيد المرسل لك عبر{'\n'}عبر البريد الالكتروني</Text>
                 </View>
                 <View style={styles.viewCodeFieldStyle}>
                     <CodeField

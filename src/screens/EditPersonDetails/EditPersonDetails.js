@@ -14,6 +14,7 @@ import SelectDropdown from 'react-native-select-dropdown';
 function EditPersonDetails(props) {
   const [visible, setVisible] = useState(false);
   const [bloodType, setBloodType] = useState('نوع الدم');
+
   const handleVisible = () => {
     setVisible(true);
   };
@@ -25,7 +26,7 @@ function EditPersonDetails(props) {
   return (
     <GeneralPage>
       <View style={styles.conatiner}>
-        <ProfileImage iconName="pencil" nameAfterImage iconOnImage />
+        <ProfileImage iconName="pen" nameAfterImage iconOnImage iconBgColor />
         <View style={styles.dropDownView}>
           <SelectDropdown
             renderDropdownIcon={() => (

@@ -7,21 +7,24 @@ import {
   ScrollView,
 } from 'react-native';
 import styles from './style';
-import {COLORS, FONTS, ICONS, MARGIN} from '../../constants/Constants';
+import { COLORS, FONTS, ICONS, MARGIN } from '../../constants/Constants';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
-import {TextInput} from 'react-native-paper';
+import { TextInput } from 'react-native-paper';
 import Appbutton from '../../components/Appbutton/Appbutton';
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
 
 function SignUp() {
   return (
-    <View style={styles.container}>
-      <StatusBar backgroundColor={COLORS.blue} />
-      <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle} >
+
+      <View style={styles.container}>
+        <StatusBar backgroundColor={COLORS.blue} />
         <View style={styles.topViewStyle}>
-          <ReusableArrowButton />
-          <View style={styles.viewHeaderStyle}>
+          <ReusableArrowButton
+            style={styles.afterArrowButtonMargin}
+          />
+          <View style={styles.viewHeaderTextStyle}>
             <View style={styles.viewforheaderstyle}>
               <Text style={styles.firstTextHeaderStyle}>تسجيل</Text>
             </View>
@@ -36,7 +39,7 @@ function SignUp() {
         <View style={styles.viewAfterHeaderStyle}>
           <Reusabletextinput
             placeholder="الاسم"
-            style={styles.firsttextinputmargin}
+            style={styles.eachtextinputmargin}
             bordercolor={COLORS.gray}
           />
           <Reusabletextinput
@@ -94,11 +97,12 @@ function SignUp() {
             </TouchableOpacity>
           </View>
 
-          <Appbutton buttontext="متابعه" />
+          <Appbutton
+            changeButtonStyle={styles.buttonMargin}
+            buttonText="متابعه" />
           <View style={styles.viewForLastTextStyle}>
             <View>
               <Text style={styles.textAfterTextinputsStyle}>
-                {' '}
                 لديك حساب بالفعل؟
               </Text>
             </View>
@@ -107,8 +111,9 @@ function SignUp() {
             </TouchableOpacity>
           </View>
         </View>
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
+
   );
 }
 export default SignUp;
