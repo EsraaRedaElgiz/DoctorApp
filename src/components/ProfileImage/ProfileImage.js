@@ -59,12 +59,14 @@ function ProfileImage(props) {
             style={[
               styles.buttonEditIconOnImage,
               {
-                backgroundColor: iconBgColor
-                  ? COLORS.lightBlue
-                  : COLORS.lightGray,
+                backgroundColor: iconBgColor ? COLORS.blue : COLORS.lightGray,
               },
             ]}>
-            <FontAwesome5 name="pen" size={ICONS.xsIcon} />
+            <FontAwesome5
+              name="pen"
+              size={ICONS.xsIcon}
+              color={iconBgColor ? COLORS.white : COLORS.gray}
+            />
           </TouchableOpacity>
         </View>
       ) : (

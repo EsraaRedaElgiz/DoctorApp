@@ -30,21 +30,6 @@ function EditPersonDetails(props) {
       <View style={styles.conatiner}>
         <ProfileImage iconName="pen" nameAfterImage iconOnImage iconBgColor />
         <DropDown data={countries} placeholder="نوع الدم" />
-        {/* <View style={styles.dropDownView}>
-          <SelectDropdown
-            renderDropdownIcon={() => (
-              <Icon name="caretdown" size={ICONS.xsIcon} color={COLORS.gray} />
-            )}
-            buttonTextStyle={{textAlign: 'left'}}
-            rowTextStyle={{textAlign: 'right'}}
-            buttonStyle={styles.buttonStyle}
-            defaultButtonText="نوع الدم"
-            data={countries}
-            onSelect={(selectedItem, index) => {
-              console.log(selectedItem, index);
-            }}
-          />
-        </View> */}
         <View style={styles.inputView}>
           <Reusabletextinput
             keyboardType="number-pad"
@@ -66,9 +51,6 @@ function EditPersonDetails(props) {
             bordercolor={COLORS.gray}
           />
         </View>
-        {/* <View style={styles.inputView}>
-          <Reusabletextinput placeholder="النوع" bordercolor={COLORS.gray} />
-        </View> */}
         <DropDown data={geneder} placeholder="النوع" />
         <View style={styles.inputView}>
           <Reusabletextinput
