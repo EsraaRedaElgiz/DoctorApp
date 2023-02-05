@@ -10,6 +10,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import {RFValue} from 'react-native-responsive-fontsize';
 import SelectDropdown from 'react-native-select-dropdown';
+import DropDown from '../../components/DropDown/DropDown';
 
 function EditPersonDetails(props) {
   const [visible, setVisible] = useState(false);
@@ -23,11 +24,13 @@ function EditPersonDetails(props) {
   };
 
   const countries = ['A+', 'B+', 'C+'];
+  const geneder = ['ذكر', 'انثي'];
   return (
     <GeneralPage>
       <View style={styles.conatiner}>
         <ProfileImage iconName="pen" nameAfterImage iconOnImage iconBgColor />
-        <View style={styles.dropDownView}>
+        <DropDown data={countries} placeholder="نوع الدم" />
+        {/* <View style={styles.dropDownView}>
           <SelectDropdown
             renderDropdownIcon={() => (
               <Icon name="caretdown" size={ICONS.xsIcon} color={COLORS.gray} />
@@ -41,21 +44,35 @@ function EditPersonDetails(props) {
               console.log(selectedItem, index);
             }}
           />
-        </View>
+        </View> */}
         <View style={styles.inputView}>
-          <Reusabletextinput placeholder="الوزن" bordercolor={COLORS.gray} />
-        </View>
-        <View style={styles.inputView}>
-          <Reusabletextinput placeholder="الطول" bordercolor={COLORS.gray} />
-        </View>
-        <View style={styles.inputView}>
-          <Reusabletextinput placeholder="العمر" bordercolor={COLORS.gray} />
-        </View>
-        <View style={styles.inputView}>
-          <Reusabletextinput placeholder="النوع" bordercolor={COLORS.gray} />
+          <Reusabletextinput
+            keyboardType="number-pad"
+            placeholder="الوزن"
+            bordercolor={COLORS.gray}
+          />
         </View>
         <View style={styles.inputView}>
           <Reusabletextinput
+            keyboardType="number-pad"
+            placeholder="الطول"
+            bordercolor={COLORS.gray}
+          />
+        </View>
+        <View style={styles.inputView}>
+          <Reusabletextinput
+            keyboardType="number-pad"
+            placeholder="العمر"
+            bordercolor={COLORS.gray}
+          />
+        </View>
+        {/* <View style={styles.inputView}>
+          <Reusabletextinput placeholder="النوع" bordercolor={COLORS.gray} />
+        </View> */}
+        <DropDown data={geneder} placeholder="النوع" />
+        <View style={styles.inputView}>
+          <Reusabletextinput
+            keyboardType="number-pad"
             placeholder="رقم الهاتف"
             bordercolor={COLORS.gray}
           />

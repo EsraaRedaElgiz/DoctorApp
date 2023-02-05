@@ -45,7 +45,7 @@ function ProfileImage(props) {
                 ? [
                     styles.imageProfileStyle,
                     styles.viewFalseSelectedImage,
-                    {marginBottom: MARGIN.smMargin},
+                    {marginBottom: MARGIN.xsMargin},
                   ]
                 : [styles.imageProfileStyle, styles.viewFalseSelectedImage]
             }>
