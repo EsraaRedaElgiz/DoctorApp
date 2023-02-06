@@ -15,49 +15,51 @@ function ResetPassword() {
 
     return (
 
-        <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle} >
-            <View style={styles.container}>
-                <StatusBar backgroundColor={COLORS.blue} />
-                <HeaderArrowAndWord
-                    text="إعاده تعيين كلمة المرور"
-                    arrowButtonStyle={styles.arrowButtonStyle}
-                    textColor={COLORS.black}
-                    textStyle={styles.textHeaderStyle}
-                />
-                <View style={styles.viewForTextStyle}>
-                    <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة مختلفه عن كلمة المرور المستخدمه سابقا</Text>
+        <View style={styles.container}>
+            <StatusBar backgroundColor={COLORS.blue} />
+            <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle} >
+                <View style={styles.viewForScrollviewContainer}>
+                    <HeaderArrowAndWord
+                        text="إعاده تعيين كلمة المرور"
+                        arrowButtonStyle={styles.arrowButtonStyle}
+                        textColor={COLORS.black}
+                        textStyle={styles.textHeaderStyle}
+                    />
+                    <View style={styles.viewForTextStyle}>
+                        <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة مختلفه عن كلمة المرور المستخدمه سابقا</Text>
+                    </View>
+                    <Reusabletextinput
+                        placeholder="كلمه المرور"
+                        right={
+                            <TextInput.Icon
+                                icon="eye"
+                                iconColor={COLORS.darkGray}
+                            />
+                        }
+                        bordercolor={COLORS.gray}
+                        secureTextEntry
+                        style={styles.firstTextInputMargin}
+
+                    />
+                    <Reusabletextinput
+                        placeholder="تأكيد كلمه المرور"
+                        right={
+                            <TextInput.Icon
+                                icon="eye"
+                                iconColor={COLORS.darkGray}
+                            />
+                        }
+                        bordercolor={COLORS.gray}
+                        secureTextEntry
+                        style={styles.secondTextInputMargin}
+                    />
                 </View>
-                <Reusabletextinput
-                    placeholder="كلمه المرور"
-                    right={
-                        <TextInput.Icon
-                            icon="eye"
-                            iconColor={COLORS.darkGray}
-                        />
-                    }
-                    bordercolor={COLORS.gray}
-                    secureTextEntry
-                    style={styles.firstTextInputMargin}
-
-                />
-                <Reusabletextinput
-                    placeholder="تأكيد كلمه المرور"
-                    right={
-                        <TextInput.Icon
-                            icon="eye"
-                            iconColor={COLORS.darkGray}
-                        />
-                    }
-                    bordercolor={COLORS.gray}
-                    secureTextEntry
-                    style={styles.secondTextInputMargin}
-                />
-                <View style={styles.viewBetweenLastTextInputAndButton}></View>
-
+            </ScrollView>
+            <View style={styles.buttonContainerStyle}>
                 <GeneralButton title="حفظ" />
-
             </View>
-        </ScrollView>
+
+        </View>
 
     )
 

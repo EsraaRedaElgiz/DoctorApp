@@ -29,7 +29,7 @@ import SignUp from './src/screens/SignUp/SignUp';
 import LogIn from './src/screens/LogIn/LogIn';
 import SupportTeam from './src/screens/SupportTeam/SupportTeam';
 function App() {
-  return <SupportTeam />;
+  return <ForgetPassword/>;
 }
 
 export default App;

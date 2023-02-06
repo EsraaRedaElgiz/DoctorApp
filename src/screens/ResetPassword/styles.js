@@ -8,16 +8,20 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         backgroundColor: COLORS.white,
-        paddingHorizontal: PADDINGS.mdPadding,
-        paddingTop: '5%',
+        // paddingHorizontal: PADDINGS.mdPadding,
+        // paddingTop: '5%',
         //  alignItems: 'center'
         paddingBottom: '1%'
     }, arrowButtonStyle: {
-        elevation: RFValue(10)
+        elevation: RFValue(3)
+    }, viewForScrollviewContainer: {
+        paddingHorizontal: PADDINGS.mdPadding,
+        paddingTop: '5%',
+        paddingBottom: '1%'
     }, textHeaderStyle: {
         marginLeft: RFValue(-20)
     }, viewForTextStyle: {
-        marginTop: '10%',
+        marginTop: '5%',
         marginBottom: '15%'
     }, textStyle: {
         color: COLORS.darkGray,
@@ -28,12 +32,10 @@ const styles = StyleSheet.create({
         marginBottom: '10%',
     }, secondTextInputMargin: {
         marginBottom: '10%',
-    }, viewBetweenLastTextInputAndButton: {
-        minHeight: RFValue(50),
-        marginBottom: '30%'
-
     }, scrollViewStyle: {
         backgroundColor: COLORS.white
+    }, buttonContainerStyle: {
+        paddingHorizontal: PADDINGS.mdPadding
     }
 
 

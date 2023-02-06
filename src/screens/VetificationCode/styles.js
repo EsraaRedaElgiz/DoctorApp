@@ -12,48 +12,52 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         backgroundColor: COLORS.white,
+        //paddingHorizontal: PADDINGS.mdPadding,
+        //paddingTop: '5%',
+        //alignItems: 'center',
+        paddingBottom: '1%'
+    }, viewForScrollviewContainer: {
         paddingHorizontal: PADDINGS.mdPadding,
         paddingTop: '5%',
         alignItems: 'center',
         paddingBottom: '1%'
     }, arrowButtonStyle: {
-        elevation: RFValue(10)
+        elevation: RFValue(3)
     }, viewBlueStyle: {
         backgroundColor: COLORS.blue,
-        width: RFValue(130),
-        height: RFValue(130),
-        borderRadius: RFValue(65)
+        width: RFValue(150),
+        height: RFValue(150),
+        borderRadius: RFValue(75)
         , alignItems: 'center',
         justifyContent: 'center'
     }, textHeaderStyle: {
         marginLeft: RFValue(-20)
     }, viewImage: {
-        marginTop: '10%',
-        width: RFValue(250),
-        height: RFValue(250),
+        marginTop: '5%',
+        //  width: RFValue(250),
+        //   height: RFValue(250),
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     }, imageStyle: {
         width: RFValue(250),
         height: RFValue(250)
     }, viewForTextStyle: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '8%'
+        marginTop: '15%'
     }, textStyle: {
         color: COLORS.darkGray,
         fontSize: FONTS.h5,
         fontFamily: "Amaranth-Regular",
         textAlign: 'center'
-    }, buttonMargin: {
-        marginTop: '15%',
-        width:'100%'
-    }, codeFieldRoot: {
-        marginTop: '15%',
+    }, buttonStyle: {
+        //marginTop: '15%',
+        width: '100%'
     }, viewCodeFieldStyle: {
         alignItems: 'center',
-        justifyContent: 'center'
-
+        justifyContent: 'center',
+        marginBottom: '10%',
+        marginTop: '15%'
     }, cell: {
         width: RFValue(50),
         height: RFValue(50),
@@ -70,6 +74,8 @@ const styles = StyleSheet.create({
         borderColor: COLORS.blue,
     }, scrollViewStyle: {
         backgroundColor: COLORS.white
+    }, buttonContainerStyle: {
+        paddingHorizontal: PADDINGS.mdPadding
     }
 
 

@@ -8,19 +8,24 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         backgroundColor: COLORS.white,
+        //paddingHorizontal: PADDINGS.mdPadding,
+        //  paddingTop: '5%',
+        // alignItems: 'center',
+        paddingBottom: '1%'
+    }, arrowButtonStyle: {
+        elevation: RFValue(3)
+    }, viewForScrollviewContainer: {
         paddingHorizontal: PADDINGS.mdPadding,
         paddingTop: '5%',
         alignItems: 'center',
         paddingBottom: '1%'
-    }, arrowButtonStyle: {
-        elevation: RFValue(3)
     }, textHeaderStyle: {
         marginLeft: RFValue(-15)
     }, viewImage: {
-        marginTop: '10%'
+        marginTop: '5%'
     }, imageStyle: {
         width: RFValue(250),
-        height: RFValue(250)
+        height: RFValue(250),
     }, viewForTextStyle: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -31,12 +36,14 @@ const styles = StyleSheet.create({
         fontFamily: "Amaranth-Regular",
         textAlign: 'center'
     }, textInputMargin: {
-        marginTop: '15%'
-    }, buttonMargin: {
         marginTop: '15%',
-        width:'100%'
+        marginBottom: '10%'
+    }, buttonStyle: {
+        width: '100%',
     }, scrollViewStyle: {
         backgroundColor: COLORS.white
+    }, buttonContainerStyle: {
+        paddingHorizontal: PADDINGS.mdPadding
     }
 
 })
