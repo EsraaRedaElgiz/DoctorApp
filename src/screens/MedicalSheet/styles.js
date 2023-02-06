@@ -32,29 +32,20 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderTopRightRadius: RFValue(85),
     paddingHorizontal: PADDINGS.mdPadding,
-    flex: 5,
+    //flex: 5,
     paddingTop: '15%',
     paddingBottom: '1%'
-  }, firstTextInoutMargun: {
+  }, firstTextInputMargun: {
     marginTop: '5%',
     marginBottom: '5%'
   }, eachTextInputMargin: {
     marginBottom: '5%'
-  }, lastTextInputMargin: {
-    marginBottom: '10%'
   }, scrollViewStyle: {
     backgroundColor: COLORS.white
-  }, selectBoxStyle: {
-    borderRadius: RADIUS.xsRadius,
-    minHeight: RFValue(50),
-    alignItems: 'center',
-    borderColor: COLORS.gray
-  }, inputStyle: {
-    fontSize: FONTS.h5
-  }, dropDownListHeight: {
-    height: RFValue(80)
   }, buttonMargin: {
     marginTop: '10%'
+  }, dropDownMarginBottom: {
+    marginBottom: '0%'
   }
 
 

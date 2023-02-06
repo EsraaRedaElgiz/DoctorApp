@@ -26,10 +26,7 @@ function DoctorOrPatient() {
                 />
                 <GeneralButton
                     title="دكتور"
-
                 />
-
-
             </View>
         </ScrollView>
     )
