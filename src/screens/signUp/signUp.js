@@ -12,8 +12,11 @@ import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
 import { TextInput } from 'react-native-paper';
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
 import GeneralButton from "../../components/GeneralButton/GeneralButton";
-
+import { useSelector, useDispatch } from "react-redux";
+import { setName, setPhoneNum, setEmail, setPassword, setConfirmPassword } from '../../Redux/Reducers/SignUpSlice'
 function SignUp() {
+  const dispatch = useDispatch();
+  const globalState = useSelector(state => state);
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle} >
 
@@ -40,6 +43,7 @@ function SignUp() {
             placeholder="الاسم"
             style={styles.eachtextinputmargin}
             bordercolor={COLORS.gray}
+            onChangeText={(val) => { dispatch(setName(val)) }}
           />
           <Reusabletextinput
             placeholder="رقم الهاتف"
