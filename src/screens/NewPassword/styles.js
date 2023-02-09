@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.white
     }, viewButtonContainerStyle: {
         paddingHorizontal: PADDINGS.mdPadding
+    },textErrorColor:{
+        color:"#f00"
     }
 
 

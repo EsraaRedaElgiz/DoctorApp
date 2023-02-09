@@ -35,15 +35,18 @@ const styles = StyleSheet.create({
         fontSize: FONTS.h5,
         fontFamily: "Amaranth-Regular",
         textAlign: 'center'
-    }, textInputMargin: {
+    }, textInputContainerMargin: {
         marginTop: '15%',
-        marginBottom: '10%'
+        marginBottom: '10%',
+        width: '100%'
     }, buttonStyle: {
         width: '100%',
     }, scrollViewStyle: {
         backgroundColor: COLORS.white
     }, buttonContainerStyle: {
         paddingHorizontal: PADDINGS.mdPadding
+    }, errorTextStyle: {
+        color: "#f00",
     }
 
 })

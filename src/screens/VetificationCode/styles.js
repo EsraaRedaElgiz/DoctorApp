@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         borderWidth: RFValue(2),
         borderRadius: RADIUS.xsRadius,
         lineHeight: RFValue(45),
-        borderColor: COLORS.gray,
+        // borderColor: COLORS.gray,
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
@@ -76,6 +76,8 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.white
     }, buttonContainerStyle: {
         paddingHorizontal: PADDINGS.mdPadding
+    }, errorTestStyle: {
+        color: "#f00",
     }
 
 
