@@ -4,6 +4,7 @@ import NewPasswordReducer from './Reducers/NewPasswordSlice'
 import VertificationCodeReducer from './Reducers/VertificationCodeSlice'
 import ForgetPasswordReducer from './Reducers/SendEmailSlice'
 import LoginReducer from './Reducers/LoginSlice'
+import MedicalSheetReducer from './Reducers/MedicalSheetSlice'
 import { createStore, configureStore } from '@reduxjs/toolkit'
 const store = configureStore({
     reducer: {
@@ -12,7 +13,8 @@ const store = configureStore({
         NewPasswordReducer: NewPasswordReducer,
         VertificationCodeReducer: VertificationCodeReducer,
         ForgetPasswordReducer: ForgetPasswordReducer,
-        LoginReducer: LoginReducer
+        LoginReducer: LoginReducer,
+        MedicalSheetReducer:MedicalSheetReducer
     }
 })
 export default store;

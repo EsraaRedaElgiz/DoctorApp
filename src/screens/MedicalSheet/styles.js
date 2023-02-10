@@ -36,16 +36,18 @@ const styles = StyleSheet.create({
     paddingTop: '15%',
     paddingBottom: '1%'
   }, firstTextInputMargun: {
-    marginTop: '5%',
-    marginBottom: '5%'
+    marginTop: '1%',
+    marginBottom: '1%'
   }, eachTextInputMargin: {
-    marginBottom: '5%'
+    marginBottom: '1%'
   }, scrollViewStyle: {
     backgroundColor: COLORS.white
   }, buttonMargin: {
     marginTop: '10%'
   }, dropDownMarginBottom: {
     marginBottom: '0%'
+  },errorTextColor:{
+    color:"#f00"
   }
 
 
