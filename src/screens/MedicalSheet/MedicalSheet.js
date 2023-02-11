@@ -1,46 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   StatusBar,
   ScrollView,
   Text,
-  PermissionsAndroid,
+  TouchableOpacity
 } from 'react-native';
 import styles from './styles';
-import { COLORS } from '../../constants/Constants';
+import { COLORS, FONTS } from '../../constants/Constants';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
 import HeaderArrowAndWord from '../../components/HeaderArrowAndWord/HeaderArrowAndWord'
 import ProfileImage from '../../components/ProfileImage/ProfileImage';
 import GeneralButton from '../../components/GeneralButton/GeneralButton';
 import DropDown from '../../components/DropDown/DropDown';
 import { useSelector, useDispatch } from "react-redux";
-import { setBloodType, setWeight, setHeight, setAge, setGender } from '../../Redux/Reducers/MedicalSheetSlice'
+import { setPhotoUri, setBloodType, setWeight, setHeight, setAge, setGender } from '../../Redux/Reducers/MedicalSheetSlice'
 import { useForm, Controller } from "react-hook-form";
+import * as ImagePicker from 'react-native-image-picker';
+import RBSheet from "react-native-raw-bottom-sheet";
+import { requestCameraPermission } from '../../utils/CameraPermissin'
+import { RFValue } from 'react-native-responsive-fontsize';
 
 function MedicalSheet() {
   useEffect(() => {
     requestCameraPermission();
   }, []);
-  const requestCameraPermission = async () => {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.CAMERA,
-        {
-          title: "Cool Photo App Camera Permission",
-          message: "Cool Photo App needs access to your camera " + "so you can take awesome pictures.",
-          buttonNeutral: "Ask Me Later",
-          buttonNegative: "Cancel",
-          buttonPositive: "OK"
-        },);
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log("You can use the camera");
-      } else {
-        console.log("Camera permission denied");
-      }
-    } catch (err) {
-      console.warn(err);
-    }
-  };
+  const refRBSheet = useRef();
   const selectFromGallery = () => {
     let options = {
       storageOptions: {
@@ -57,8 +42,7 @@ function MedicalSheet() {
         console.log('User tapped custom button: ', res.customButton);
         alert(res.customButton);
       } else {
-
-        //setphoto_uri(photo_uri => res.assets[0].uri) //الصوره اللي اخترناها هتتحط مكان الديفولت
+        setphoto_uri(photo_uri => res.assets[0].uri) //الصوره اللي اخترناها هتتحط مكان الديفولت
         // upload_img(res.assets[0].base64)//بيبعت الصوره للباك 
       }
     });
@@ -71,8 +55,7 @@ function MedicalSheet() {
       },
     };
     ImagePicker.launchCamera(options, (res) => {
-      console.log('Response = ', res);
-
+     // console.log('Response = ', res);
       if (res.didCancel) {
         console.log('User cancelled image picker');
       } else if (res.error) {
@@ -81,13 +64,14 @@ function MedicalSheet() {
         console.log('User tapped custom button: ', res.customButton);
         alert(res.customButton);
       } else {
-        //setphoto_uri(photo_uri => res.assets[0].uri)
+        setphoto_uri(photo_uri => res.assets[0].uri)
         //upload_img(res.assets[0].base64)
       }
     });
   }
   const dispatch = useDispatch();
   const globalState = useSelector(state => state);
+  const [photo_uri, setphoto_uri] = useState(globalState.MedicalSheetReducer.photoUri);
   const blood = ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"]
   const type = ["ذكر", 'أنثي']
   const { control, handleSubmit, formState: { errors }, watch } = useForm({
@@ -100,13 +84,14 @@ function MedicalSheet() {
     }
   });
   const onSubmit = (data) => {
-    console.log(data);
+    //console.log(data);
+    dispatch(setPhotoUri(photo_uri));
     dispatch(setBloodType(data.bloodType))
     dispatch(setWeight(data.weight))
     dispatch(setHeight(data.height))
     dispatch(setAge(data.age))
     dispatch(setGender(data.gender))
-
+    //console.log(photo_uri);
   }
   return (
     <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
@@ -118,11 +103,26 @@ function MedicalSheet() {
             textColor={COLORS.white}
             textStyle={styles.wordHeaderMargin}
             style={styles.customButtonIconAndWordMargin}
+            onPress={() => {
+              dispatch(setPhotoUri(""))
+              dispatch(setBloodType(""))
+              dispatch(setWeight(""))
+              dispatch(setHeight(""))
+              dispatch(setAge(""))
+              dispatch(setGender(""))
+            }}
           />
           <View style={styles.viewHeaderStyle}>
-            <ProfileImage
-              iconOnImage={true}
-            />
+            {photo_uri ? (
+              <ProfileImage
+                iconOnImage={true}
+                onPressPen={() => refRBSheet.current.open()}
+                imageUri={photo_uri}
+              />) : (
+              <ProfileImage
+                iconOnImage={true}
+                onPressPen={() => refRBSheet.current.open()}
+              />)}
           </View>
         </View>
 
@@ -252,9 +252,36 @@ function MedicalSheet() {
           <View style={styles.buttonMargin}>
             <GeneralButton title="تأكيد"
               onPress={handleSubmit(onSubmit)}
-
+              
             />
           </View>
+          <RBSheet
+            ref={refRBSheet}
+            height={RFValue(200)}
+            openDuration={250}
+            customStyles={{
+              container: {
+                alignItems: "center"
+              }
+            }}
+          >
+            <TouchableOpacity onPress={() => launchCamera()}
+              style={styles.eachOptionInBottonTab}>
+              <Text style={styles.optionTextStyle}>التقاط صوره</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => selectFromGallery()}
+              style={styles.eachOptionInBottonTab}>
+              <Text style={styles.optionTextStyle}>اختيار صوره</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setphoto_uri(photo_uri => "")}
+              style={styles.eachOptionInBottonTab}>
+              <Text style={[styles.optionTextStyle, { color: "#f00" }]}>مسح الصوره</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => refRBSheet.current.close()}
+              style={[styles.eachOptionInBottonTab, { borderBottomWidth: 0 }]}>
+              <Text style={styles.optionTextStyle}>انهاء</Text>
+            </TouchableOpacity>
+          </RBSheet>
         </View>
       </View>
     </ScrollView>

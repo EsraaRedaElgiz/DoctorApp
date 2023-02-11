@@ -27,8 +27,8 @@ function ResetPassword() {
     });
     const onSubmit = (data) => {
         // console.log(data);
-        dispatch(setPassword(data.confirmPassword))
-        dispatch(setConfirmPassword(data.password))
+        dispatch(setPassword(data.password))
+        dispatch(setConfirmPassword(data.confirmPassword))
 
     }
     const pass_secured = () => {
@@ -47,6 +47,10 @@ function ResetPassword() {
                         arrowButtonStyle={styles.arrowButtonStyle}
                         textColor={COLORS.black}
                         textStyle={styles.textHeaderStyle}
+                        onPress={()=>{
+                            dispatch(setPassword(""))
+                            dispatch(setConfirmPassword(""))
+                        }}
                     />
                     <View style={styles.viewForTextStyle}>
                         <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة مختلفه عن كلمة المرور المستخدمه سابقا</Text>

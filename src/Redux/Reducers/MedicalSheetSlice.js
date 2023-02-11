@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 const initState = {
+    photoUri: "",
     bloodType: "",
     weight: "",
     height: "",
@@ -10,8 +11,10 @@ const medicalSheetSlice = createSlice({
     name: "MedicalSheet",
     initialState: initState,
     reducers: {
-        setBloodType: (state, action) => {
-            state.bloodType = action.payload
+        setPhotoUri: (state, action) => {
+            state.photoUri = action.payload;
+        }, setBloodType: (state, action) => {
+            state.bloodType = action.payload;
         }, setWeight: (state, action) => {
             state.weight = action.payload;
         }, setHeight: (state, action) => {
@@ -25,6 +28,7 @@ const medicalSheetSlice = createSlice({
 });
 export default medicalSheetSlice.reducer;
 export const {
+    setPhotoUri,
     setBloodType,
     setWeight,
     setHeight,

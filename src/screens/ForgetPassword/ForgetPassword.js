@@ -31,6 +31,9 @@ function ForgetPassword() {
                         arrowButtonStyle={styles.arrowButtonStyle}
                         textColor={COLORS.black}
                         textStyle={styles.textHeaderStyle}
+                        onPress={()=>{
+                            dispatch(setEmailToSendVerificationCode(""))
+                        }}
                     />
                     <View style={styles.viewImage}>
                         <Image source={require('../../assets/Images/ForgetPassword.png')} style={styles.imageStyle} />

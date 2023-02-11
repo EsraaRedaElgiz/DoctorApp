@@ -50,6 +50,9 @@ function VertificationCode() {
                         arrowButtonStyle={styles.arrowButtonStyle}
                         textColor={COLORS.black}
                         textStyle={styles.textHeaderStyle}
+                        onPress={() => {
+                            dispatch(setVertificationCode(""))
+                        }}
                     />
                     <View style={styles.viewImage}>
                         <View style={styles.viewBlueStyle}>

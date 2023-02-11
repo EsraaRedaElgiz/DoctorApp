@@ -8,7 +8,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function ProfileImage(props) {
-  const { iconName, iconOnImage, nameAfterImage, selectedImage, iconBgColor } =
+  const { iconName, iconOnImage, nameAfterImage, selectedImage, iconBgColor, onPressPen, imageUri } =
     props;
   return (
     <View style={styles.profileView}>
@@ -23,11 +23,13 @@ function ProfileImage(props) {
               }
               source={require('../../assets/Images/profile.png')}
             />
-            <TouchableOpacity style={[
-              styles.buttonEditIconOnImage,
-              {
-                backgroundColor: iconBgColor ? COLORS.blue : COLORS.lightGray,
-              }]}>
+            <TouchableOpacity
+              onPress={onPressPen}
+              style={[
+                styles.buttonEditIconOnImage,
+                {
+                  backgroundColor: iconBgColor ? COLORS.blue : COLORS.white,
+                }]}>
               <FontAwesome5
                 name="pen"
                 size={ICONS.xsIcon}
@@ -57,17 +59,26 @@ function ProfileImage(props) {
                 ]
                 : [styles.imageProfileStyle, styles.viewFalseSelectedImage]
             }>
-            <Ionicons
-              name="person-sharp"
-              size={RFValue(60)}
-              color={COLORS.darkGray}
-            />
+            {imageUri ?
+              (
+                <Image source={{ uri: imageUri }} style={styles.imageProfileStyle} />
+              ) :
+              (
+                <Ionicons
+                  name="person-sharp"
+                  size={RFValue(60)}
+                  color={COLORS.darkGray}
+                />
+              )
+            }
+
           </View>
           <TouchableOpacity
+            onPress={onPressPen}
             style={[
               styles.buttonEditIconOnImage,
               {
-                backgroundColor: iconBgColor ? COLORS.blue : COLORS.lightGray,
+                backgroundColor: iconBgColor ? COLORS.blue : COLORS.white,
               },
             ]}>
             <FontAwesome5

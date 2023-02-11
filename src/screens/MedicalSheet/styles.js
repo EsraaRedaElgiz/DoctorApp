@@ -46,8 +46,18 @@ const styles = StyleSheet.create({
     marginTop: '10%'
   }, dropDownMarginBottom: {
     marginBottom: '0%'
-  },errorTextColor:{
-    color:"#f00"
+  }, errorTextColor: {
+    color: "#f00"
+  }, eachOptionInBottonTab: {
+    width: '100%',
+    borderBottomWidth: RFValue(1),
+    borderColor: COLORS.gray,
+    height: RFValue(50),
+    alignItems: 'center',
+    justifyContent: 'center'
+  }, optionTextStyle: {
+    fontSize: FONTS.h5,
+    color: COLORS.blue
   }
 
 

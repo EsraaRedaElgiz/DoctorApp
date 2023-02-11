@@ -47,6 +47,11 @@ function NewPassword() {
                         arrowButtonStyle={styles.arrowButtonStyle}
                         textColor={COLORS.black}
                         textStyle={styles.textHeaderStyle}
+                        onPress={() => {
+                            dispatch(setOldPassword(""))
+                            dispatch(setNewPassword(""))
+                            dispatch(setConfirmNewPassword(""))
+                        }}
                     />
                     <View style={styles.viewForTextStyle}>
                         <Text style={styles.textStyle} >يجب ان تكون كلمة المرور الجديدة مختلفه عن كلمه المرور المستخدمه المستخدمه سابقا</Text>
@@ -126,7 +131,7 @@ function NewPassword() {
                         {errors.newPassword?.type === 'maxLength' && <Text style={{ color: "#f00" }}>كلمة المرور يجب ان لا تزيد عن 20 حرف ورقم</Text>}
                                 {errors.newPassword?.type == "validate" && <Text style={{ color: "#f00" }}>يجب ان تكون كلمة المرور الجديده مختلفه عن كلمة المرور القديمه</Text>}*/}
                         <Text style={styles.textErrorColor}>
-                            {errors.newPassword?.type === "required" ? "يجب ادخال كلمة المرور الجديده":
+                            {errors.newPassword?.type === "required" ? "يجب ادخال كلمة المرور الجديده" :
                                 errors.newPassword?.type === "pattern" ? "كلمه المرور يجب لا تقل عن 8 ارقام وحرف كبير وحرف صغير وعلامه مميزه" :
                                     errors.newPassword?.type === "maxLength" ? "كلمة المرور يجب ان لا تزيد عن 20 حرف ورقم" :
                                         errors.newPassword?.type === "validate" ? "يجب ان تكون كلمة المرور الجديده مختلفه عن كلمة المرور القديمه" : ""}
