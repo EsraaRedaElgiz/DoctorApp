@@ -49,7 +49,14 @@ function LogIn() {
       <View style={styles.container}>
         <StatusBar backgroundColor={COLORS.blue} />
         <View style={styles.topViewStyle}>
-          <ReusableArrowButton style={styles.custombuttonIconStyle} />
+          <ReusableArrowButton
+            style={styles.custombuttonIconStyle}
+            onPress={() => {
+              dispatch(setEmail(""))
+              dispatch(setPassword(""))
+              dispatch(setRememberMe(""))
+            }}
+          />
           <View style={styles.viewHeaderStyle}>
             <View style={styles.viewforheaderstyle}>
               <Text style={styles.firstTextHeaderStyle}>اهلا بعودتك !</Text>

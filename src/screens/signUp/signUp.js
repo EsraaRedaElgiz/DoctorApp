@@ -58,6 +58,13 @@ function SignUp() {
         <View style={styles.topViewStyle}>
           <ReusableArrowButton
             style={styles.afterArrowButtonMargin}
+            onPress={() => {
+              dispatch(setName(""))
+              dispatch(setPhoneNum(""))
+              dispatch(setEmail(""))
+              dispatch(setPassword(""))
+              dispatch(setConfirmPassword(""))
+            }}
           />
           <View style={styles.viewHeaderTextStyle}>
             <View style={styles.viewforheaderstyle}>
