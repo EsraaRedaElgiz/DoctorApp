@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     textAlign:'center'
   },
   viewAfterHeaderStyle: {
-
     backgroundColor: COLORS.white,
     borderTopRightRadius: RFValue(85),
     paddingHorizontal: PADDINGS.mdPadding,
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
     paddingBottom: '1%'
 
   }, eachtextinputmargin: {
-    marginBottom: '5%',
+    marginBottom: '.5%',
   },
   viewForfirstTextAfterTextinputs: {
     width: '100%',
@@ -85,6 +84,8 @@ const styles = StyleSheet.create({
     marginBottom: '5%'
   }, scrollViewStyle: {
     backgroundColor: COLORS.white
+  },errorTextColor:{
+    color:"#f00"
   }
 });
 export default styles;

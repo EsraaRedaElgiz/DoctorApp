@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
     paddingTop: '15%',
     paddingBottom: '1%'
   },
-  eachtextinputmargin: {
-    marginBottom: '5%',
+  eachTextinputAndErrorTextContainer: {
+    marginBottom: '3%',
   },
   viewForfirstTextAfterTextinputs: {
     width: '100%',
@@ -116,6 +116,8 @@ const styles = StyleSheet.create({
     marginBottom: '5%'
   }, scrollViewStyle: {
     backgroundColor: COLORS.white
-  }
+  },textErrorColor:{
+    color:"#f00"
+}
 });
 export default styles;

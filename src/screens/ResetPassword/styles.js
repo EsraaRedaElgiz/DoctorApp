@@ -28,14 +28,14 @@ const styles = StyleSheet.create({
         fontSize: FONTS.h5,
         fontFamily: "Amaranth-Regular",
         alignSelf: 'flex-start'
-    }, firstTextInputMargin: {
-        marginBottom: '10%',
-    }, secondTextInputMargin: {
+    }, viewTextInputAndTextMargin: {
         marginBottom: '10%',
     }, scrollViewStyle: {
         backgroundColor: COLORS.white
     }, buttonContainerStyle: {
         paddingHorizontal: PADDINGS.mdPadding
+    },textErrorColor:{
+        color:"#f00"
     }
 
 

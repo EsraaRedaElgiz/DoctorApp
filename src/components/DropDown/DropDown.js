@@ -6,7 +6,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import SelectDropdown from 'react-native-select-dropdown';
 
 function DropDown(props) {
-  const {data, placeholder, style} = props;
+  const {data, placeholder, style, onSelect, borderColor, ...rest} = props;
   return (
     <View style={[styles.dropDownView, style]}>
       <SelectDropdown
@@ -15,12 +15,20 @@ function DropDown(props) {
         )}
         buttonTextStyle={styles.buttonTextStyle}
         rowTextStyle={{textAlign: 'right'}}
-        buttonStyle={styles.buttonStyle}
+        buttonStyle={{
+          flex: 1,
+          borderWidth: 1,
+          borderRadius: RFValue(5),
+          borderColor: borderColor,
+          backgroundColor: COLORS.white,
+          minHeight: RFValue(47),
+        }}
         defaultButtonText={placeholder}
         data={data}
-        onSelect={(selectedItem, index) => {
+        /* onSelect={(selectedItem, index) => {
           console.log(selectedItem, index);
-        }}
+        }}*/
+        onSelect={onSelect}
       />
     </View>
   );
@@ -33,14 +41,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: COLORS.white,
     marginBottom: MARGIN.mdMargin,
-  },
-  buttonStyle: {
-    flex: 1,
-    borderWidth: 1,
-    borderRadius: RFValue(5),
-    borderColor: COLORS.gray,
-    backgroundColor: COLORS.white,
-    minHeight: RFValue(47),
   },
   buttonTextStyle: {
     textAlign: 'left',
