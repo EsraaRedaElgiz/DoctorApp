@@ -180,7 +180,8 @@ function Prescription(props) {
         customStyles={{
           container: {
             alignItems: 'center',
-            borderRadius: RFValue(30),
+            borderTopLeftRadius: RFValue(30),
+            borderTopRightRadius: RFValue(30),
           },
         }}>
         <TouchableOpacity
