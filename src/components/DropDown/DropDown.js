@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { COLORS, FONTS, ICONS, MARGIN } from '../../constants/Constants';
+import {View, Text, StyleSheet} from 'react-native';
+import {COLORS, FONTS, ICONS, MARGIN} from '../../constants/Constants';
 import Icon from 'react-native-vector-icons/AntDesign';
-import { RFValue } from 'react-native-responsive-fontsize';
+import {RFValue} from 'react-native-responsive-fontsize';
 import SelectDropdown from 'react-native-select-dropdown';
 
 function DropDown(props) {
-  const { data, placeholder, style } = props;
+  const {data, placeholder, style} = props;
   return (
     <View style={[styles.dropDownView, style]}>
       <SelectDropdown
@@ -14,7 +14,7 @@ function DropDown(props) {
           <Icon name="caretdown" size={ICONS.xsIcon} color={COLORS.gray} />
         )}
         buttonTextStyle={styles.buttonTextStyle}
-        rowTextStyle={{ textAlign: 'right' }}
+        rowTextStyle={{textAlign: 'right'}}
         buttonStyle={styles.buttonStyle}
         defaultButtonText={placeholder}
         data={data}
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: COLORS.white,
     marginBottom: MARGIN.mdMargin,
-
   },
   buttonStyle: {
     flex: 1,
@@ -41,13 +40,14 @@ const styles = StyleSheet.create({
     borderRadius: RFValue(5),
     borderColor: COLORS.gray,
     backgroundColor: COLORS.white,
-    minHeight: RFValue(50),
-  }, buttonTextStyle: {
+    minHeight: RFValue(47),
+  },
+  buttonTextStyle: {
     textAlign: 'left',
     color: COLORS.darkGray,
     fontSize: FONTS.h5,
     fontFamily: 'Amaranth-Regular',
-  }
+  },
 });
 
 export default DropDown;
