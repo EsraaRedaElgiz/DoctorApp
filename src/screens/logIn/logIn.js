@@ -10,7 +10,6 @@ import {
 import styles from './styles';
 import { Checkbox } from 'react-native-paper';
 import { COLORS, ICONS } from '../../constants/Constants';
-import FontAwesome5Pro from 'react-native-vector-icons/FontAwesome5Pro';
 import Reusabletextinput from '../../components/AppTextinput/AppTextinput';
 import { TextInput } from 'react-native-paper';
 import ReusableArrowButton from '../../components/AppRightIcon/AppRightIcon';
@@ -18,6 +17,7 @@ import GeneralButton from "../../components/GeneralButton/GeneralButton";
 import { useSelector, useDispatch } from "react-redux";
 import { setEmail, setPassword, setRememberMe } from '../../Redux/Reducers/LoginSlice'
 import { useForm, Controller } from "react-hook-form";
+import LoginWithG from '../../utils/LoginWithG'
 
 function LogIn() {
   const dispatch = useDispatch();
@@ -156,19 +156,8 @@ function LogIn() {
             <View style={styles.lineviewstyle}></View>
           </View>
           <View style={styles.viewfortwoboxesstyle}>
-            <TouchableOpacity style={styles.twoSquaresStyle}>
-              <FontAwesome5Pro
-                name="facebook"
-                size={ICONS.xxlIcon}
-                color={COLORS.blue}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.twoSquaresStyle}>
-              <Image
-                source={require('../../assets/Images/google.png')}
-                style={styles.imagestyle}
-              />
-            </TouchableOpacity>
+
+            <LoginWithG/>
           </View>
           <GeneralButton
             title="متابعه"

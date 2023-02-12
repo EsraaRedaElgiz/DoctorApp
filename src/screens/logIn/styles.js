@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     fontSize: FONTS.h3,
     fontFamily: 'Amaranth-Regular',
-    textAlign:'center'
+    textAlign: 'center'
   },
   secondTextHeaderStyle: {
     color: COLORS.white,
     fontSize: FONTS.h4,
     fontFamily: 'Amaranth-Regular',
-    textAlign:'center'
+    textAlign: 'center'
   },
   viewAfterHeaderStyle: {
     backgroundColor: COLORS.white,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     width: RFValue(50),
     height: RFValue(50),
     borderRadius: RFValue(5),
-    marginHorizontal: '5%',
+    //marginHorizontal: '5%',
     backgroundColor: COLORS.lightGray2,
     elevation: RFValue(3),
   },
@@ -116,8 +116,8 @@ const styles = StyleSheet.create({
     marginBottom: '5%'
   }, scrollViewStyle: {
     backgroundColor: COLORS.white
-  },textErrorColor:{
-    color:"#f00"
-}
+  }, textErrorColor: {
+    color: "#f00"
+  }
 });
 export default styles;

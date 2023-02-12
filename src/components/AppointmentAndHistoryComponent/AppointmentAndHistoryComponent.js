@@ -8,7 +8,7 @@ function AppointmentAndHistoryComponent(props) {
     const { style, doctorName, doctorSpeciality, dateShow, day, month, year, timeShow, time, status } = props
 
     return (
-        <View style={[styles.container, style]}>
+        <TouchableOpacity style={[styles.container, style]}>
             <View style={styles.innerContainer}>
                 <View style={styles.imageContainer}>
                     <Image source={require('../../assets/Images/download.png')} style={styles.imageStyle} />
@@ -56,7 +56,7 @@ function AppointmentAndHistoryComponent(props) {
 
 
             </View>
-        </View>
+        </TouchableOpacity>
 
 
     )

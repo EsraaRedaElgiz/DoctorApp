@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native'
 import styles from './styles'
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { COLORS } from '../../../constants/Constants'
+import { useSelector, useDispatch } from "react-redux";
+import { setIntroSlider } from '../../../Redux/Reducers/IntroSliderSlice'
 
 function IntroSlider() {
+    const dispatch = useDispatch();
+    const globalState = useSelector(state => state);
+    const [introDone, setIntroDone] = useState(globalState.IntroSliderReducer.IntroSliderDone)
     const slides = [
         {
             key: 1,
@@ -43,9 +48,9 @@ function IntroSlider() {
     };
     const renderDoneButton = () => {
         return (
-            <View style={styles.doneButtonStyle}>
+            <TouchableOpacity style={styles.doneButtonStyle}>
                 <Text style={styles.textNextAndDoneStyle}>التالي</Text>
-            </View>
+            </TouchableOpacity>
         );
     };
     return (

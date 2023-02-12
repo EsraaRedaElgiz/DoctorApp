@@ -28,5 +28,17 @@ const userProfileData = [
     icon: 'export2',
   },
 ];
+const appointments = [
+  {
+    doctorName: "سامي علي",
+    doctorSpeciality: "الطب العام والداخلي",
+    day: "٤",
+    month: "سبتمبر",
+    year: "٢٠٢٢",
+    time: "٣٠:٥",
+    status: "م"
+  },
+ 
+]
 
-export {userProfileData};
+export { userProfileData,appointments };

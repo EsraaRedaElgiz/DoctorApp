@@ -5,6 +5,7 @@ import VertificationCodeReducer from './Reducers/VertificationCodeSlice'
 import ForgetPasswordReducer from './Reducers/SendEmailSlice'
 import LoginReducer from './Reducers/LoginSlice'
 import MedicalSheetReducer from './Reducers/MedicalSheetSlice'
+import IntroSliderReducer from './Reducers/IntroSliderSlice'
 import { createStore, configureStore } from '@reduxjs/toolkit'
 const store = configureStore({
     reducer: {
@@ -14,7 +15,8 @@ const store = configureStore({
         VertificationCodeReducer: VertificationCodeReducer,
         ForgetPasswordReducer: ForgetPasswordReducer,
         LoginReducer: LoginReducer,
-        MedicalSheetReducer:MedicalSheetReducer
+        MedicalSheetReducer: MedicalSheetReducer,
+        IntroSliderReducer:IntroSliderReducer
     }
 })
 export default store;

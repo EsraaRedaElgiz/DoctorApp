@@ -1,16 +1,81 @@
 import React from "react";
-import { View, ScrollView, StatusBar } from 'react-native'
-import { COLORS } from '../../constants/Constants'
+import { View, StatusBar, FlatList } from 'react-native'
+import { COLORS, PADDINGS } from '../../constants/Constants'
 import styles from './styles'
 import HeaderArrowAndWord from "../../components/HeaderArrowAndWord/HeaderArrowAndWord";
 import AppointmentAndHistoryComponent from '../../components/AppointmentAndHistoryComponent/AppointmentAndHistoryComponent'
+//import {appointment} from '../../utils/DummyData'
 
 function Appointment() {
-    return (
-        <ScrollView style={styles.scrollViewStyle} >
+    const appointments = [
+        {
+            doctorName: "سامي علي",
+            doctorSpeciality: "الطب العام والداخلي",
+            day: "٤",
+            month: "سبتمبر",
+            year: "٢٠٢٢",
+            time: "٣٠:٥",
+            status: "م"
+        }, {
+            doctorName: "سامي علي",
+            doctorSpeciality: "الطب العام والداخلي",
+            day: "٤",
+            month: "سبتمبر",
+            year: "٢٠٢٢",
+            time: "٣٠:٥",
+            status: "م"
+        }, {
+            doctorName: "سامي علي",
+            doctorSpeciality: "الطب العام والداخلي",
+            day: "٤",
+            month: "سبتمبر",
+            year: "٢٠٢٢",
+            time: "٣٠:٥",
+            status: "م"
+        }, {
+            doctorName: "سامي علي",
+            doctorSpeciality: "الطب العام والداخلي",
+            day: "٤",
+            month: "سبتمبر",
+            year: "٢٠٢٢",
+            time: "٣٠:٥",
+            status: "م"
+        }, {
+            doctorName: "سامي علي",
+            doctorSpeciality: "الطب العام والداخلي",
+            day: "٤",
+            month: "سبتمبر",
+            year: "٢٠٢٢",
+            time: "٣٠:٥",
+            status: "م"
+        }
 
-            <View showsVerticalScrollIndicator={false} style={styles.container}>
-                <StatusBar backgroundColor={COLORS.blue} />
+    ]
+    keyextractor = (item, index) => index.toString();
+    const renderitems = ({ item, index }) => {
+        const { doctorName, doctorSpeciality, day, month, year, time, status } = item
+        return (
+            <AppointmentAndHistoryComponent
+                doctorName={doctorName}
+                doctorSpeciality={doctorSpeciality}
+                dateShow={true}
+                day={day}
+                month={month}
+                year={year}
+                timeShow={true}
+                time={time}
+                status={status}
+                style={styles.afterEachCardMargin}
+            />
+
+        )
+
+    }
+    return (
+
+        <View style={styles.container}>
+            <StatusBar backgroundColor={COLORS.blue} />
+            <View style={styles.headerViewStyleAndFlatListStyle}>
                 <HeaderArrowAndWord
                     text="المواعيد"
                     arrowButtonStyle={styles.arrowButtonStyle}
@@ -18,48 +83,16 @@ function Appointment() {
                     textStyle={styles.textHeaderStyle}
                     style={styles.afterHeaderMargin}
                 />
-                <AppointmentAndHistoryComponent
-                    doctorName="سامي علي"
-                    doctorSpeciality="الطب العام والداخلي"
-                    dateShow={true}
-                    day="٤"
-                    month="سبتمبر"
-                    year="٢٠٢٢"
-                    timeShow={true}
-                    time="٣٠:٥"
-                    status="م"
-                    style={styles.afterEachCardMargin}
-                />
-                <AppointmentAndHistoryComponent
-                    doctorName="سامي علي"
-                    doctorSpeciality="الطب العام والداخلي"
-                    dateShow={true}
-                    day="٤"
-                    month="سبتمبر"
-                    year="٢٠٢٢"
-                    timeShow={true}
-                    time="٣٠:٥"
-                    status="م"
-                    style={styles.afterEachCardMargin}
-                />
-                <AppointmentAndHistoryComponent
-                    doctorName="سامي علي"
-                    doctorSpeciality="الطب العام والداخلي"
-                    dateShow={true}
-                    day="٤"
-                    month="سبتمبر"
-                    year="٢٠٢٢"
-                    timeShow={true}
-                    time="٣٠:٥"
-                    status="م"
-                    style={styles.afterEachCardMargin}
-                />
-
-
-
-
             </View>
-        </ScrollView>
+            <FlatList
+                keyExtractor={keyextractor}
+                data={appointments}
+                renderItem={renderitems}
+                style={styles.headerViewStyleAndFlatListStyle}
+                showsVerticalScrollIndicator={false}
+
+            />
+        </View>
 
 
     )
