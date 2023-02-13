@@ -1,15 +1,22 @@
-import React from 'react';
-import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
+import React, {useState, useEffect} from 'react';
+import {View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {RFValue} from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/AntDesign';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
-import { MARGIN, COLORS, FONTS, ICONS } from '../../constants/Constants';
+import {MARGIN, COLORS, FONTS, ICONS} from '../../constants/Constants';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function ProfileImage(props) {
-  const { iconName, iconOnImage, nameAfterImage, selectedImage, iconBgColor, onPressPen, imageUri } =
-    props;
+  const {
+    iconName,
+    iconOnImage,
+    nameAfterImage,
+    selectedImage,
+    iconBgColor,
+    onPressPen,
+    imageUri,
+  } = props;
   return (
     <View style={styles.profileView}>
       {selectedImage ? (
@@ -18,7 +25,7 @@ function ProfileImage(props) {
             <Image
               style={
                 nameAfterImage
-                  ? [styles.imageProfileStyle, { marginBottom: MARGIN.smMargin }]
+                  ? [styles.imageProfileStyle, {marginBottom: MARGIN.smMargin}]
                   : [styles.imageProfileStyle]
               }
               source={require('../../assets/Images/profile.png')}
@@ -29,7 +36,8 @@ function ProfileImage(props) {
                 styles.buttonEditIconOnImage,
                 {
                   backgroundColor: iconBgColor ? COLORS.blue : COLORS.white,
-                }]}>
+                },
+              ]}>
               <FontAwesome5
                 name="pen"
                 size={ICONS.xsIcon}
@@ -41,7 +49,7 @@ function ProfileImage(props) {
           <Image
             style={
               nameAfterImage
-                ? [styles.imageProfileStyle, { marginBottom: MARGIN.smMargin }]
+                ? [styles.imageProfileStyle, {marginBottom: MARGIN.smMargin}]
                 : [styles.imageProfileStyle]
             }
             source={require('../../assets/Images/profile.png')}
@@ -53,25 +61,24 @@ function ProfileImage(props) {
             style={
               nameAfterImage
                 ? [
-                  styles.imageProfileStyle,
-                  styles.viewFalseSelectedImage,
-                  { marginBottom: MARGIN.xsMargin },
-                ]
+                    styles.imageProfileStyle,
+                    styles.viewFalseSelectedImage,
+                    {marginBottom: MARGIN.xsMargin},
+                  ]
                 : [styles.imageProfileStyle, styles.viewFalseSelectedImage]
             }>
-            {imageUri ?
-              (
-                <Image source={{ uri: imageUri }} style={styles.imageProfileStyle} />
-              ) :
-              (
-                <Ionicons
-                  name="person-sharp"
-                  size={RFValue(60)}
-                  color={COLORS.darkGray}
-                />
-              )
-            }
-
+            {imageUri ? (
+              <Image
+                source={{uri: imageUri}}
+                style={styles.imageProfileStyle}
+              />
+            ) : (
+              <Ionicons
+                name="person-sharp"
+                size={RFValue(60)}
+                color={COLORS.darkGray}
+              />
+            )}
           </View>
           <TouchableOpacity
             onPress={onPressPen}
@@ -93,10 +100,10 @@ function ProfileImage(props) {
           style={
             nameAfterImage
               ? [
-                styles.imageProfileStyle,
-                styles.viewFalseSelectedImage,
-                { marginBottom: MARGIN.smMargin },
-              ]
+                  styles.imageProfileStyle,
+                  styles.viewFalseSelectedImage,
+                  {marginBottom: MARGIN.smMargin},
+                ]
               : [styles.imageProfileStyle, styles.viewFalseSelectedImage]
           }>
           <Ionicons
@@ -109,7 +116,7 @@ function ProfileImage(props) {
       {nameAfterImage ? (
         <View
           style={
-            iconName ? styles.iconNameView : { marginBottom: MARGIN.xlMargin }
+            iconName ? styles.iconNameView : {marginBottom: MARGIN.xlMargin}
           }>
           <Text style={styles.name}>عبدالرحمن محمد عياد</Text>
           {iconName ? (

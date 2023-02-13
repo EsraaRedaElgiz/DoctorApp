@@ -1,6 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
-import {COLORS, MARGIN, PADDINGS} from '../../constants/Constants';
+import {COLORS, MARGIN, PADDINGS, FONTS} from '../../constants/Constants';
 const {width, height} = Dimensions.get('window');
 
 const styles = StyleSheet.create({
@@ -50,6 +50,23 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray,
     backgroundColor: COLORS.white,
     height: RFValue(46),
+  },
+  eachOptionInBottonTab: {
+    width: '100%',
+    borderColor: COLORS.gray,
+    height: RFValue(50),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  optionTextStyle: {
+    fontSize: FONTS.h5,
+    color: COLORS.blue,
+    fontWeight: '600',
+  },
+  line: {
+    height: 1,
+    backgroundColor: '#bbb',
+    width: '90%',
   },
 });
 

@@ -106,6 +106,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: PADDINGS.smPadding,
   },
+  eachOptionInBottonTab: {
+    width: '100%',
+    borderColor: COLORS.gray,
+    height: RFValue(50),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  optionTextStyle: {
+    fontSize: FONTS.h5,
+    color: COLORS.blue,
+    fontWeight: '600',
+  },
+  line: {
+    height: RFValue(1),
+    backgroundColor: COLORS.gray,
+    width: '90%',
+  },
 });
 
 export default styles;

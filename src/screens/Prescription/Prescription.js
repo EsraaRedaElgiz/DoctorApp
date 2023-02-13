@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -25,9 +25,13 @@ import {
 } from '../../constants/Constants';
 import {RFValue} from 'react-native-responsive-fontsize';
 import Icon from 'react-native-vector-icons/Feather';
+import * as ImagePicker from 'react-native-image-picker';
+import {requestCameraPermission} from '../../utils/CameraPermissin';
+import RBSheet from 'react-native-raw-bottom-sheet';
 const {height} = Dimensions.get('window');
 
 function Prescription(props) {
+  const [photo_uri, setphoto_uri] = useState(null);
   const [head, setHead] = useState(['الدواء', 'المدة', 'ملاحظات']);
   const [data, setData] = useState([
     ['lorim', 'يومان', 'مرة'],
@@ -36,6 +40,53 @@ function Prescription(props) {
     ['tmam', 'يومان', 'مرة'],
   ]);
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    requestCameraPermission();
+  }, []);
+  const refRBSheet = useRef();
+  const selectFromGallery = () => {
+    let options = {
+      storageOptions: {
+        skipBackup: true,
+        path: 'images',
+      },
+    };
+    ImagePicker.launchImageLibrary({options, includeBase64: true}, res => {
+      if (res.didCancel) {
+        console.log('User cancelled image picker');
+      } else if (res.error) {
+        console.log('ImagePicker Error: ', res.error);
+      } else if (res.customButton) {
+        console.log('User tapped custom button: ', res.customButton);
+        alert(res.customButton);
+      } else {
+        setphoto_uri(photo_uri => res.assets[0].uri);
+      }
+    });
+  };
+  const launchCamera = () => {
+    let options = {
+      storageOptions: {
+        skipBackup: true,
+        path: 'images',
+      },
+    };
+    ImagePicker.launchCamera(options, res => {
+      // console.log('Response = ', res);
+      if (res.didCancel) {
+        console.log('User cancelled image picker');
+      } else if (res.error) {
+        console.log('ImagePicker Error: ', res.error);
+      } else if (res.customButton) {
+        console.log('User tapped custom button: ', res.customButton);
+        alert(res.customButton);
+      } else {
+        setphoto_uri(photo_uri => res.assets[0].uri);
+        //upload_img(res.assets[0].base64)
+      }
+    });
+  };
   return (
     <GeneralPage>
       <View style={styles.container}>
@@ -83,7 +134,11 @@ function Prescription(props) {
           </View>
           <View style={styles.rowTableStyle}>
             <Text style={styles.analysisText}>اشاعات</Text>
-            <TouchableOpacity style={styles.openButton}>
+            <TouchableOpacity
+              style={styles.openButton}
+              onPress={() => {
+                refRBSheet.current.open();
+              }}>
               <Text style={styles.openText}>اضافة</Text>
             </TouchableOpacity>
           </View>
@@ -112,12 +167,58 @@ function Prescription(props) {
           <View style={styles.imageView}>
             <Image
               resizeMode="contain"
-              source={require('../../assets/Images/pcr-analysis.jpeg')}
+              source={{uri: photo_uri}}
               style={styles.imageStyle}
             />
           </View>
         </View>
       </Modal>
+      <RBSheet
+        ref={refRBSheet}
+        height={RFValue(200)}
+        openDuration={250}
+        customStyles={{
+          container: {
+            alignItems: 'center',
+            borderTopLeftRadius: RFValue(30),
+            borderTopRightRadius: RFValue(30),
+          },
+        }}>
+        <TouchableOpacity
+          onPress={() => {
+            launchCamera();
+            refRBSheet.current.close();
+          }}
+          style={styles.eachOptionInBottonTab}>
+          <Text style={styles.optionTextStyle}>التقاط صورة</Text>
+        </TouchableOpacity>
+        <View style={styles.line} />
+        <TouchableOpacity
+          onPress={() => {
+            refRBSheet.current.close();
+            selectFromGallery();
+          }}
+          style={styles.eachOptionInBottonTab}>
+          <Text style={styles.optionTextStyle}>اختيار صورة</Text>
+        </TouchableOpacity>
+        <View style={styles.line} />
+        <TouchableOpacity
+          onPress={() => {
+            refRBSheet.current.close();
+            setphoto_uri(photo_uri => '');
+          }}
+          style={styles.eachOptionInBottonTab}>
+          <Text style={[styles.optionTextStyle, {color: COLORS.red}]}>
+            مسح الصورة
+          </Text>
+        </TouchableOpacity>
+        <View style={styles.line} />
+        <TouchableOpacity
+          onPress={() => refRBSheet.current.close()}
+          style={styles.eachOptionInBottonTab}>
+          <Text style={styles.optionTextStyle}>انهاء</Text>
+        </TouchableOpacity>
+      </RBSheet>
     </GeneralPage>
   );
 }
