@@ -297,19 +297,28 @@ function MedicalSheet() {
               },
             }}>
             <TouchableOpacity
-              onPress={() => launchCamera()}
+              onPress={() => {
+                launchCamera();
+                refRBSheet.current.close();
+              }}
               style={styles.eachOptionInBottonTab}>
               <Text style={styles.optionTextStyle}>التقاط صوره</Text>
             </TouchableOpacity>
             <View style={styles.line} />
             <TouchableOpacity
-              onPress={() => selectFromGallery()}
+              onPress={() => {
+                refRBSheet.current.close();
+                selectFromGallery();
+              }}
               style={styles.eachOptionInBottonTab}>
               <Text style={styles.optionTextStyle}>اختيار صوره</Text>
             </TouchableOpacity>
             <View style={styles.line} />
             <TouchableOpacity
-              onPress={() => setphoto_uri(photo_uri => '')}
+              onPress={() => {
+                refRBSheet.current.close();
+                setphoto_uri(photo_uri => '');
+              }}
               style={styles.eachOptionInBottonTab}>
               <Text style={[styles.optionTextStyle, { color: COLORS.red }]}>
                 مسح الصوره
