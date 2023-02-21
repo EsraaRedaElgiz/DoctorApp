@@ -82,7 +82,7 @@ function LogIn() {
                 <Reusabletextinput
                   placeholder="عنوان البريد الالكتروني"
                   keyboardType="email-address"
-                  bordercolor={COLORS.gray}
+                  bordercolor={errors.email?COLORS.red:COLORS.gray}
                   onChangeText={onChange}
                   onBlur={onBlur}
                 />)}
@@ -106,7 +106,7 @@ function LogIn() {
               render={({ field: { onChange, onBlur, value } }) => (
                 <Reusabletextinput
                   placeholder="كلمه المرور"
-                  bordercolor={COLORS.gray}
+                  bordercolor={errors.password?COLORS.red:COLORS.gray}
                   right={
                     <TextInput.Icon
                       icon="eye"
