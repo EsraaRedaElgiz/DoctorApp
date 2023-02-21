@@ -12,17 +12,16 @@ const styles = StyleSheet.create({
         paddingBottom: '1%',
     }, arrowButtonStyle: {
         elevation: RFValue(3)
-    }, headerViewStyleAndFlatListStyle: {
+    }, flatListStyle: {
+        width: '100%',
+        backgroundColor: COLORS.white
+    }, headerViewStyleAndFlatListContainerStyle: {
         width: "100%",
-        paddingHorizontal: PADDINGS.mdPadding
+        paddingHorizontal: PADDINGS.mdPadding,
     }, textHeaderStyle: {
         marginLeft: RFValue(-25)
-    }, afterHeaderMargin: {
-        marginBottom: '5%'
     }, afterEachCardMargin: {
         marginBottom: '5%'
-    }, scrollViewStyle: {
-        backgroundColor: COLORS.white
     }
 
 })

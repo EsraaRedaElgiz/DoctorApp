@@ -29,6 +29,7 @@ function VertificationCode() {
         value,
         setValue,
     });
+    const handlerOnFulfill = (code) => { console.log(code); }
     const { control, handleSubmit, formState: { errors }, watch } = useForm({
         defaultValues: {
             code: globalState.VertificationCodeReducer.code
@@ -74,14 +75,14 @@ function VertificationCode() {
                                 <CodeField
                                     ref={ref}
                                     {...props}
-                                    // Use `caretHidden={false}` when users can't paste a text value, because context menu doesn't appear
                                     value={value}
-                                    // onChangeText={setValue}
+                                    //onChangeText={setValue}
                                     onChangeText={onChange}
                                     onBlur={onBlur}
                                     cellCount={4}
                                     keyboardType="number-pad"
                                     textContentType="oneTimeCode"
+                                    onFulfill={handlerOnFulfill(value)}
                                     renderCell={({ index, symbol, isFocused }) => (
                                         <Text
                                             key={index}
@@ -93,8 +94,6 @@ function VertificationCode() {
                                 />)}
                             name="code"
                         />
-                        {/* {errors.code?.type === "required" && <Text style={styles.errorTestStyle}>يجب ادخال رمز التأكيد</Text>}
-                        {errors.code?.type === 'minLength' && <Text style={styles.errorTestStyle}>يجب ادخال الارقام المرسله بالكامل</Text>}*/}
                         <Text style={styles.errorTestStyle}>
                             {errors.code?.type === "required" ? "يجب ادخال رمز التأكيد" :
                                 errors.code?.type === "minLength" ? "يجب ادخال الارقام المرسله بالكامل" : ""

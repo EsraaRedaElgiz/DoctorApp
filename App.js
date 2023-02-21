@@ -29,7 +29,7 @@ import SupportTeam from './src/screens/SupportTeam/SupportTeam';
 import SignUp from './src/screens/SignUp/SignUp'
 import LogIn from './src/screens/LogIn/LogIn'
 function App() {
-  return <MedicalSheet/>;
+  return <Splash/>;
 }
 
 export default App;

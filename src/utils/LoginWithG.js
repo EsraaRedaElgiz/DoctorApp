@@ -12,14 +12,14 @@ GoogleSignin.configure({
 
 })
 function LoginWithG() {
-    const [userInfo, setUserInfo] = useState({})
+    const [user, setUser] = useState({})
 
     const signIn = async () => {
 
         try {
             await GoogleSignin.hasPlayServices();
-            userInfo = await GoogleSignin.signIn();
-            setUserInfo(userInfo => userInfo)
+            const userInfo = await GoogleSignin.signIn();
+            setUser(user => userInfo)
             console.log(userInfo)
         } catch (error) {
             if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -29,7 +29,7 @@ function LoginWithG() {
             } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
                 console.log("play services not available or outdated")
             } else {
-                console.log("some other error happened")
+                console.log(error.message)
             }
         }
     };

@@ -6,6 +6,8 @@ import ForgetPasswordReducer from './Reducers/SendEmailSlice'
 import LoginReducer from './Reducers/LoginSlice'
 import MedicalSheetReducer from './Reducers/MedicalSheetSlice'
 import IntroSliderReducer from './Reducers/IntroSliderSlice'
+import AppointmentReducer from './Reducers/AppointmentSlice'
+import HistoryReducer from './Reducers/HistorySlice'
 import { createStore, configureStore } from '@reduxjs/toolkit'
 const store = configureStore({
     reducer: {
@@ -16,7 +18,9 @@ const store = configureStore({
         ForgetPasswordReducer: ForgetPasswordReducer,
         LoginReducer: LoginReducer,
         MedicalSheetReducer: MedicalSheetReducer,
-        IntroSliderReducer:IntroSliderReducer
+        IntroSliderReducer: IntroSliderReducer,
+        AppointmentReducer: AppointmentReducer,
+        HistoryReducer: HistoryReducer
     }
 })
 export default store;

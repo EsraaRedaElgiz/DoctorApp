@@ -22,7 +22,7 @@ import {
 
 } from '../../Redux/Reducers/SignUpSlice'
 import { useForm, Controller } from "react-hook-form";
-
+//import { insertData } from "../../Redux/Reducers/SignUpSlice";
 function SignUp() {
   const dispatch = useDispatch();
   const globalState = useSelector(state => state);
@@ -43,6 +43,21 @@ function SignUp() {
     dispatch(setEmail(data.email))
     dispatch(setPassword(data.password))
     dispatch(setConfirmPassword(data.confirmPassword))
+    //backend
+    /* const data = {
+       name: data.name,
+         phoneNum: data.phoneNum,
+         email: data.email,
+         password: data.password,
+         confirmPassword: data.confirmPassword
+       }
+       dispatch(insertData(data))
+       dispatch(setName(""))
+       dispatch(setPhoneNum(""))
+       dispatch(setEmail(""))
+       dispatch(setPassword(""))
+       dispatch(setConfirmPassword(""))*/
+
   }
   const pass_secured = () => {
     let securedPass = secured_pass;
@@ -91,7 +106,7 @@ function SignUp() {
               render={({ field: { onChange, onBlur, value } }) => (
                 <Reusabletextinput
                   placeholder="الاسم"
-                  bordercolor={errors.name ? "#f00" : COLORS.gray}
+                  bordercolor={errors.name ? COLORS.red : COLORS.gray}
                   onChangeText={onChange}
                   onBlur={onBlur}
                 />)}
@@ -115,7 +130,7 @@ function SignUp() {
                 <Reusabletextinput
                   placeholder="رقم الهاتف"
                   keyboardType="phone-pad"
-                  bordercolor={errors.phoneNum ? "#f00" : COLORS.gray}
+                  bordercolor={errors.phoneNum ? COLORS.red : COLORS.gray}
                   onChangeText={onChange}
                   onBlur={onBlur}
                 />)}
@@ -138,7 +153,7 @@ function SignUp() {
                 <Reusabletextinput
                   placeholder="عنوان البريد الالكتروني"
                   keyboardType="email-address"
-                  bordercolor={errors.email ? "#f00" : COLORS.gray}
+                  bordercolor={errors.email ? COLORS.red : COLORS.gray}
                   onChangeText={onChange}
                   onBlur={onBlur}
                 />)}
@@ -169,7 +184,7 @@ function SignUp() {
                       onPress={pass_secured}
                     />
                   }
-                  bordercolor={errors.password ? "#f00" : COLORS.gray}
+                  bordercolor={errors.password ? COLORS.red : COLORS.gray}
                   secureTextEntry={secured_pass}
                   onChangeText={onChange}
                   onBlur={onBlur}
@@ -203,7 +218,7 @@ function SignUp() {
                       onPress={pass_secured}
                     />
                   }
-                  bordercolor={errors.confirmPassword ? "#f00" : COLORS.gray}
+                  bordercolor={errors.confirmPassword ? COLORS.red : COLORS.gray}
                   secureTextEntry={secured_pass}
                   onChangeText={onChange}
                   onBlur={onBlur}
