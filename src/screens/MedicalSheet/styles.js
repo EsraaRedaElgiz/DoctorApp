@@ -11,7 +11,6 @@ import { RFValue } from 'react-native-responsive-fontsize';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.blue,
-    flexDirection: 'column',
   },
   wordHeaderMargin: {
     marginLeft: RFValue(-25),
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   buttonMargin: {
-    marginTop: '10%',
+    marginTop: '16%',
   },
   dropDownMarginBottom: {
     marginBottom: '0%',
