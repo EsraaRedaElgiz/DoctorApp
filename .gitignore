@@ -65,3 +65,4 @@ buck-out/
 /src/utils/LoginWithG.js
 /src/utils/CameraPermissin.js
 /src/utils/DummyData.js
+/android/app/build.gradle
