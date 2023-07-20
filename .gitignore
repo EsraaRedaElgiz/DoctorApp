@@ -63,3 +63,5 @@ buck-out/
 /ios/Pods/
 /vendor/bundle/
 /src/utils/LoginWithG.js
+/src/utils/CameraPermissin.js
+/src/utils/DummyData.js
